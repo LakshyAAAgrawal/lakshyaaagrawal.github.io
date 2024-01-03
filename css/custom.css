@@ -73,7 +73,7 @@ body {
      font-weight: 400;
 }
  .menulink {
-    
+
      color: #002147;
      font-size: 1.1rem;
      font-weight: 300;
@@ -111,4 +111,8 @@ body {
      .paper {
          border-left: 1px solid #ddd;
     }
+}
+
+.carousel .carousel-item {
+    transition-duration: 100ms;
 }
