@@ -1,10 +1,33 @@
 # lakshyaaagrawal.github.io
 
-This repository hosts the source code for the homepage of Lakshya A Agrawal, hosted at [lakshyaaagrawal.github.io/](https://lakshyaaagrawal.github.io/).
+Source for the homepage of Lakshya A Agrawal, served by GitHub Pages at [lakshyaaagrawal.github.io](https://lakshyaaagrawal.github.io/).
+
+## Layout
+
+The site is a single hand-written static page with no build step or framework.
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | All content: bio, news, research, publications, talks, software, honors |
+| `css/site.css` | Styling; light/dark themes via CSS custom properties |
+| `js/site.js` | Theme toggle and external-link handling (progressive enhancement only) |
+| `images/` | Portrait (`profile-640.jpg`, `profile-1024.jpg`, source `profile.png`) |
+| `assets/CV.pdf` | Current CV |
+| `assets/papers/` | Locally hosted PDFs for older papers |
+| `assets/logos/` | GEPA logo variants |
+| `favicon.svg`, `*.png`, `site.webmanifest` | Icons (PNGs generated from `favicon.svg` with `rsvg-convert`) |
+| `.github/workflows/static.yml` | Deploys the repository root to GitHub Pages on push to `master` |
+
+## Editing
+
+- News, publications, and talks are plain HTML lists in `index.html`; copy an existing `<li>` or `.row` block.
+- Update the "Last updated" line in the footer and `lastmod` in `sitemap.xml` when publishing.
+- To preview locally: `python3 -m http.server 8000` in the repository root, then open <http://localhost:8000/>.
 
 ## Acknowledgements
-I am very thankful to [Sebastin Santy](http://sebastinsanty.com/) for providing the awesome [template](https://github.com/SebastinSanty/minimal-research-theme). The original template was further modified by [Arkil Patel](https://arkilpatel.github.io/), and then by [Ayush Agrawal](https://ayush1801.github.io/), whose source I obtained and modified to build my own website. I am thankful to all of them for providing their updates.
 
-[Shikhar Sharma](https://github.com/Shikharhacks007) was very helpful in fixing a weird issue with Bootstrap, where contents from different cells were overlapping on screens of a certain size. The changes were a part of the commit id [518e00452e660e55c58145001da26dd325836ef4](https://github.com/LakshyAAAgrawal/lakshyaaagrawal.github.io/commit/518e00452e660e55c58145001da26dd325836ef4).
+Earlier versions of this site were built on the [minimal-research-theme](https://github.com/SebastinSanty/minimal-research-theme) by [Sebastin Santy](http://sebastinsanty.com/), as modified by [Arkil Patel](https://arkilpatel.github.io/) and [Ayush Agrawal](https://ayush1801.github.io/), with fixes from [Shikhar Sharma](https://github.com/Shikharhacks007) and [Sidd](https://github.com/Sidd-Dino). The current design is a from-scratch rewrite, but I remain grateful to all of them.
 
-Thanks to [Sidd](https://github.com/Sidd-Dino) for pointing out a major flaw, there were some stray elements left as an artifact of refactoring.
+## Legacy files
+
+`d3/`, `nextprot/`, `javascript/`, `javascripts/`, `stylesheets/`, `fonts/`, `cites/`, `css/academicons*.css`, `css/custom.css`, and the older `images/` subfolders (`sides/`, `logos/`, `nicons/`, `icons/`) are kept from the previous version of the site. Nothing in `index.html` depends on them, but external links may, so leave them in place.
