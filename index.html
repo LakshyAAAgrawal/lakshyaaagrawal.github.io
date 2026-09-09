@@ -158,7 +158,8 @@
       <div class="section-head">
         <h2>About</h2>
       </div>
-      <div class="section-body prose">
+      <div class="section-body about-grid">
+        <div class="prose">
         <p class="lead">
           I am a Computer Science PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am fortunate to be advised by
           <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>,
@@ -190,7 +191,20 @@
           For more details, see my <a href="assets/CV.pdf">CV</a>. If you would like to chat about my work or about research in general, feel free to <a href="mailto:lakshyaaagrawal@berkeley.edu">email me</a>. For anonymous feedback, use <a href="https://forms.gle/ZdAZDRqyPkofTVQP7">this form</a>.
         </p>
 
-        <p class="keywords"><b>Keywords:</b> Large Language Models, Agent Optimization, Reinforcement Learning, Continual Learning, AI4Code, Code Generation, Static Analysis, Programming Languages, Software Engineering</p>
+        </div>
+        <aside class="rail" aria-label="Timeline and keywords">
+          <h3 class="sub-h">Timeline</h3>
+          <ol class="timeline">
+            <li><span class="d">2024–</span>PhD student, <a href="https://sky.cs.berkeley.edu/">Sky Computing Lab</a>, UC Berkeley</li>
+            <li><span class="d">2025–</span>Open Research Resident, <a href="https://www.laude.org/">Laude Institute</a></li>
+            <li><span class="d">2022–2024</span>AI4Code Research Fellow, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a></li>
+            <li><span class="d">2021</span>Software Development Engineer Intern, Microsoft</li>
+            <li><span class="d">2020, 2021</span>Summer@EPFL Research Fellow, <a href="https://www.epfl.ch/labs/vlsc/">VLSC Lab, EPFL</a></li>
+            <li><span class="d">2019</span><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> developer with INCF and Maxima</li>
+            <li><span class="d">2018–2022</span>B.Tech in Computer Science and Applied Mathematics, <a href="https://iiitd.ac.in/">IIIT-Delhi</a></li>
+          </ol>
+          <p class="keywords"><b>Keywords:</b> Large Language Models, Agent Optimization, Reinforcement Learning, Continual Learning, AI4Code, Code Generation, Static Analysis, Programming Languages, Software Engineering</p>
+        </aside>
       </div>
     </section>
 
@@ -277,59 +291,51 @@
               <img class="card-logo light-only" src="assets/logos/gepa_logo_with_text.svg" alt="GEPA">
               <img class="card-logo dark-only" src="assets/logos/gepa_logo_with_text_white.svg" alt="GEPA">
             </div>
-            <div class="card-grid">
-              <div>
-                <h3><a href="https://gepa-ai.github.io/gepa/">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a></h3>
-                <p class="tag">Learning from language, not just rewards.</p>
-                <p>
-                  Given any AI system with one or more LLM prompts, GEPA samples full trajectories, reflects on them in natural language to diagnose what went wrong, proposes and tests prompt updates, and combines complementary lessons from the Pareto frontier of its own attempts.
-                  Because each rollout yields a paragraph of diagnosis rather than a single scalar, GEPA learns from a handful of examples where RL needs thousands.
-                </p>
+            <h3><a href="https://gepa-ai.github.io/gepa/">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a></h3>
+            <p class="tag">Learning from language, not just rewards.</p>
+            <p class="wide">
+              Given any AI system with one or more LLM prompts, GEPA samples full trajectories, reflects on them in natural language to diagnose what went wrong, proposes and tests prompt updates, and combines complementary lessons from the Pareto frontier of its own attempts.
+              Because each rollout yields a paragraph of diagnosis rather than a single scalar, GEPA learns from a handful of examples where RL needs thousands.
+            </p>
+            <div class="meta">
+              <div class="facts">
+                <span class="fact"><b>ICLR 2026</b> Oral</span>
+                <span class="fact"><b>6.4k</b> GitHub stars</span>
+                <span class="fact">Integrated in DSPy, MLflow, Pydantic AI, Google ADK, Comet Opik</span>
               </div>
-              <div>
-                <div class="facts">
-                  <span class="fact"><b>ICLR 2026</b> Oral</span>
-                  <span class="fact"><b>6.4k</b> GitHub stars</span>
-                  <span class="fact">Integrated in DSPy, MLflow, Pydantic AI, Google ADK, Comet Opik</span>
-                </div>
-                <div class="card-links">
-                  <a href="https://arxiv.org/abs/2507.19457">Paper</a>
-                  <a href="https://github.com/gepa-ai/gepa">Code</a>
-                  <a href="https://gepa-ai.github.io/gepa/">Docs</a>
-                  <a href="https://www.youtube.com/watch?v=HbGah-uP1fI">ICLR talk</a>
-                  <a href="https://gepa-ai.github.io/gepa/blog/">Blog</a>
-                </div>
-                <p class="card-more">
+              <div class="card-links">
+                <a href="https://arxiv.org/abs/2507.19457">Paper</a>
+                <a href="https://github.com/gepa-ai/gepa">Code</a>
+                <a href="https://gepa-ai.github.io/gepa/">Docs</a>
+                <a href="https://www.youtube.com/watch?v=HbGah-uP1fI">ICLR talk</a>
+                <a href="https://gepa-ai.github.io/gepa/blog/">Blog</a>
+              </div>
+            </div>
+            <p class="card-more">
                   Production write-ups from <a href="https://www.databricks.com/blog/building-state-art-enterprise-agents-90x-cheaper-automated-prompt-optimization">Databricks</a> (open models optimized with GEPA beat Claude Opus 4.1 at ~90× lower cost), <a href="https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy">Dropbox</a>, and <a href="https://decagon.ai/blog/optimizing-gepa-for-production">Decagon</a>; an <a href="https://cookbook.openai.com/examples/partners/self_evolving_agents/autonomous_agent_retraining">OpenAI Cookbook</a> tutorial on self-evolving agents, written with Bain &amp; Company; and adoption at Shopify, Uber, Meta, and AWS, among others.
                   Microsoft AI used GEPA-optimized judges to <a href="https://x.com/mustafasuleyman/status/2061880164498428188">filter pre-training data</a> for MAI-Thinking-1, <a href="https://github.com/NousResearch/hermes-agent-self-evolution/blob/main/reports/phase1_validation_report.pdf">Nous Research</a> used it for agent self-evolution and skill learning, and <a href="https://www.lesswrong.com/posts/bALBxf3yGGx4bvvem/prompt-optimization-can-enable-ai-control-research">AI-control researchers</a> used it to find monitors that block 90% of malicious code at a 1% audit budget.
                   Talks by others: <a href="https://www.youtube.com/watch?v=rrtxyZ4Vnv8&amp;t=4s">Matei Zaharia</a> at Berkeley RDI, <a href="https://www.youtube.com/watch?v=A48uhxfxbsM">Samuel Colvin</a> at AI Engineer Europe, the <a href="https://www.youtube.com/watch?v=7s7daKizivQ">EleutherAI</a> reading group, <a href="https://www.youtube.com/watch?v=czy7hvXIImE">Connor Shorten</a> (Weaviate), and <a href="https://www.youtube.com/watch?v=8VC5q_64USo&amp;t=333s">Sherwood Callaway</a> (Daytona).
                 </p>
-              </div>
-            </div>
           </article>
 
           <article class="card featured">
             <div class="card-top"><span class="card-kicker">Universal text optimization</span></div>
-            <div class="card-grid">
-              <div>
             <h3><a href="https://arxiv.org/abs/2605.19633"><code>optimize_anything</code></a></h3>
             <p class="tag">If you can measure it, you can optimize it.</p>
-            <p>
+            <p class="wide">
               Prompts hold no special status. Anything expressible as text with an evaluator (code, CUDA kernels, agent architectures, scheduling policies, SVGs, mathematical constructions) can be improved by the same reflect-mutate-select loop. A single optimizer reaches state of the art across six unrelated domains, taking an ARC-AGI agent from 32.5% to 89.5% and cutting cloud-scheduling costs by about 40%.
               In July 2026 optimize_anything became engine-pluggable: one call dispatches the same task to GEPA, AutoResearch, or Meta-Harness, and the engines compose into pipelines. <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">omni</a>, a meta-optimizer that explores with all three and continues from the best, beats every standalone optimizer on Frontier-CS under a matched budget.
             </p>
+            <div class="meta">
+              <div class="facts">
+                <span class="fact"><b>ACM CAIS 2026</b> Industry Spotlight Award</span>
               </div>
-              <div>
-            <div class="facts">
-              <span class="fact"><b>ACM CAIS 2026</b> Industry Spotlight Award</span>
-            </div>
-            <div class="card-links">
-              <a href="https://arxiv.org/abs/2605.19633">Paper</a>
-              <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">Blog</a>
-              <a href="https://github.com/gepa-ai/optimize-anything-artifact">Artifact</a>
-              <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">omni</a>
-              <a href="https://github.com/gepa-ai/terrarium">Terrarium</a>
-            </div>
+              <div class="card-links">
+                <a href="https://arxiv.org/abs/2605.19633">Paper</a>
+                <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">Blog</a>
+                <a href="https://github.com/gepa-ai/optimize-anything-artifact">Artifact</a>
+                <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">omni</a>
+                <a href="https://github.com/gepa-ai/terrarium">Terrarium</a>
               </div>
             </div>
           </article>
@@ -460,7 +466,7 @@
             <h3 class="theme-title"><span class="n">05</span>Programming languages and systems</h3>
             <p class="theme-sub">The foundations. Language runtimes, transpilers, and developer tooling built before large language models, and the reason compilers and static analysis keep appearing in the work above.</p>
           </div>
-          <ul class="plain">
+          <ul class="plain cols">
             <li><span><a href="https://maxima.sourceforge.io/docs/manual/maxima_singlepage.html#Package-pytranslate"><b>Pytranslate</b></a>, a Maxima-to-Python transpiler written in Common Lisp for Google Summer of Code, shipped with every Maxima installation since 2019</span><span class="d">2019</span></li>
             <li><span><a href="https://github.com/streamblocks/streamblocks-graalvm"><b>StreamBlocks GraalVM</b></a>, the CPU runtime for the CAL dataflow language, with IDE and debugger support, built in Prof. James Larus's group at EPFL</span><span class="d">2020–21</span></li>
             <li><span><a href="https://dl.acm.org/doi/10.1145/3493700.3493757"><b>SPARQL-to-Cypher transpiler</b></a>, my undergraduate thesis with Dr. Raghava Mutharaju at IIIT-Delhi, for querying knowledge graphs across RDF and property-graph databases (CODS-COMAD 2022)</span><span class="d">2021–22</span></li>
@@ -478,6 +484,7 @@
       </div>
       <div class="section-body">
 
+        <div class="pub-group">
         <h3 class="year">2026</h3>
         <ol class="pubs">
           <li class="pub hl">
@@ -538,7 +545,9 @@
             <div class="pub-venue"><span class="v">ICLR 2026 Workshop</span></div>
           </li>
         </ol>
+        </div>
 
+        <div class="pub-group">
         <h3 class="year">2025</h3>
         <ol class="pubs">
           <li class="pub hl">
@@ -563,7 +572,9 @@
             <div class="pub-desc">Extends <a href="https://arxiv.org/abs/2510.06189">Barbarians at the Gate: How AI Is Upending Systems Research</a> (2025).</div>
           </li>
         </ol>
+        </div>
 
+        <div class="pub-group">
         <h3 class="year">2023</h3>
         <ol class="pubs">
           <li class="pub hl">
@@ -574,9 +585,11 @@
             <div class="pub-desc">Also filed as US Patent Application 18/680,100.</div>
           </li>
         </ol>
+        </div>
 
         <details class="more">
           <summary><span class="when-closed">Earlier publications (2022 and before)</span><span class="when-open">Fewer</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <div class="pub-group">
         <h3 class="year">2022 and earlier</h3>
         <ol class="pubs">
           <li class="pub">
@@ -592,6 +605,7 @@
             <div class="pub-links"><a href="https://arxiv.org/abs/2011.14280">arXiv</a></div>
           </li>
         </ol>
+        </div>
         </details>
       </div>
     </section>
@@ -605,7 +619,7 @@
       <div class="section-body">
 
         <h3 class="sub-h">Invited talks &amp; lectures</h3>
-        <div class="rows">
+        <div class="rows table">
           <div class="row">
             <div class="t">From Prompts to Programs: Text Optimization with GEPA and DSPy</div>
             <div class="d">Aug 2026</div>
@@ -654,7 +668,7 @@
         </div>
         <details class="more">
           <summary><span class="when-closed">Earlier talks</span><span class="when-open">Fewer</span><svg class="icon"><use href="#i-chev"/></svg></summary>
-        <div class="rows">
+        <div class="rows table">
           <div class="row">
             <div class="t">AI-Driven Code Performance Optimization for New Accelerators</div>
             <div class="d">Jan 2025</div>
@@ -676,8 +690,10 @@
         </div>
         </details>
 
+        <div class="two-col media">
+        <div>
         <h3 class="sub-h">Podcasts, interviews &amp; press</h3>
-        <div class="rows">
+        <div class="rows table narrow">
           <div class="row">
             <div class="t"><a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s">Delta Podcast, Ep. 52: GEPA Lead Author and Berkeley AI PhD Student</a></div>
             <div class="d">Dec 2025</div>
@@ -695,14 +711,18 @@
             <div class="w">VentureBeat feature on the GEPA paper. Also covered in DeepLearning.AI's <i>The Batch</i>.</div>
           </div>
         </div>
+        </div>
 
+        <div>
         <h3 class="sub-h">Essays</h3>
-        <div class="rows">
+        <div class="rows table narrow">
           <div class="row">
             <div class="t"><a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital: Building the Enterprise AI Learning Loop</a></div>
             <div class="d">Jun 2026</div>
             <div class="w">A response to Satya Nadella's article on enterprise AI. As frontier models improve, an organization's durable asset is the learning loop around them: private evals that encode its judgment, a harness optimized against them that stays portable across models, and, through Fast-Slow Training, a co-optimized model the organization owns.</div>
           </div>
+        </div>
+        </div>
         </div>
       </div>
     </section>
@@ -767,10 +787,10 @@
       <div class="section-head">
         <h2>Honors &amp; Service</h2>
       </div>
-      <div class="section-body two-col">
+      <div class="section-body">
         <div>
           <h3 class="sub-h">Honors</h3>
-          <ul class="plain">
+          <ul class="plain flow">
             <li><span><b>Oral</b>, ICLR 2026 (GEPA); <b>Oral</b>, ICML 2026 (Agents in Production)</span><span class="d">2026</span></li>
             <li><span><b>Industry Spotlight Award</b> ×2, ACM CAIS 2026 (optimize_anything; Multi-module GRPO)</span><span class="d">2026</span></li>
             <li><span><a href="https://www2.eecs.berkeley.edu/Students/Awards/"><b>Eli Jury Award</b></a>, UC Berkeley EECS, for outstanding achievement in systems, communications, control, or signal processing</span><span class="d">2026</span></li>
@@ -784,31 +804,23 @@
             <li><span><b>Dean's Award for Academic Excellence</b>, IIIT-Delhi</span><span class="d">2019, 2021</span></li>
           </ul>
         </div>
+        <div class="two-col">
         <div>
-          <h3 class="sub-h">Past &amp; present affiliations</h3>
-          <ul class="plain">
-            <li><span>PhD student, <a href="https://sky.cs.berkeley.edu/">Sky Computing Lab</a>, UC Berkeley</span><span class="d">2024–</span></li>
-            <li><span>Open Research Resident, <a href="https://www.laude.org/">Laude Institute</a></span><span class="d">2025–</span></li>
-            <li><span>AI4Code Research Fellow, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a></span><span class="d">2022–2024</span></li>
-            <li><span>Software Development Engineer Intern, Microsoft</span><span class="d">2021</span></li>
-            <li><span>Summer@EPFL Research Fellow, <a href="https://www.epfl.ch/labs/vlsc/">VLSC Lab, EPFL</a></span><span class="d">2020, 2021</span></li>
-            <li><span><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> developer with INCF and Maxima</span><span class="d">2019</span></li>
-            <li><span>B.Tech in Computer Science and Applied Mathematics, <a href="https://iiitd.ac.in/">IIIT-Delhi</a></span><span class="d">2018–2022</span></li>
-          </ul>
-
           <h3 class="sub-h">Service &amp; teaching</h3>
           <ul class="plain">
             <li><span>Reviewer: NeurIPS 2025 (Top Reviewer), ICLR 2025, ISEC 2024</span><span class="d"></span></li>
             <li><span>Maintainer: GEPA, DSPy, multilspy. I mentor a growing group of student collaborators on the GEPA project; many of the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA blog posts</a> are theirs.</span><span class="d"></span></li>
             <li><span>Teaching assistant, IIIT-Delhi: Machine Learning (CSE343/ECE563) and Theory of Computation (CSE322)</span><span class="d">2021</span></li>
           </ul>
-
+        </div>
+        <div>
           <h3 class="sub-h">Beyond research</h3>
           <div class="prose" style="font-size:.96rem">
             <p>
               I grew up in Chhattisgarh, India, and went to boarding school in the Nilgiris, where the school orchestra got me hooked on the <a href="https://www.youtube.com/@LakshyAAAgrawal">saxophone</a>. I still play when I can, and I listen widely, classical and jazz above all. Sanskrit NLP is close to my heart, and I follow work on it closely. I also love films and dancing.
             </p>
           </div>
+        </div>
         </div>
       </div>
     </section>
