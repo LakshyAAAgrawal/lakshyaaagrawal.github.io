@@ -471,6 +471,10 @@ img { max-width: 100%; height: auto; display: block; }
 .news .item a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule-strong); }
 .news .item a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .news .item b { color: var(--text); }
+.news.digest { gap: .55rem; }
+.news.digest li { font-size: .92rem; padding-bottom: .55rem; grid-template-columns: 7.2rem minmax(0, 1fr); }
+.news.digest time { padding-top: .2rem; }
+.section-body:has(> details.more[open]) > .news.digest { display: none; }
 details.more { margin-top: .5rem; }
 details.more > summary {
   cursor: pointer; list-style: none;
@@ -486,7 +490,7 @@ details.more:not([open]) > summary .when-open { display: none; }
 details.more .news, details.more .rows, details.more .year { margin-top: .8rem; }
 details.more .year + .pubs { margin-top: 0; }
 @media (max-width: 560px) {
-  .news li { grid-template-columns: 1fr; gap: .15rem; }
+  .news li, .news.digest li { grid-template-columns: 1fr; gap: .15rem; }
 }
 
 /* ---------- Publications ---------- */
@@ -624,6 +628,7 @@ details.more .year + .pubs { margin-top: 0; }
   .nav, .theme-toggle, .skip-link, details.more > summary { display: none !important; }
   details.more { display: block; }
   details.more .news, details.more .rows, details.more .pubs { display: grid !important; }
+  .news.digest { display: none !important; }
   body { font-size: 10.5pt; color: #000; background: #fff; }
   a { color: #000; text-decoration: none; }
   .section { border-bottom-color: #ccc; break-inside: avoid; }

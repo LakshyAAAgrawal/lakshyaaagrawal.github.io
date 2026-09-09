@@ -129,9 +129,7 @@
           <h1>Lakshya <span class="thin">A</span> Agrawal</h1>
           <p class="lede">
             I work on self-improving AI systems: agents that learn continually from their own experience, whether by rewriting their harness or by updating their weights.
-            That spans reflective optimization of the harness around a model, its prompts, skills, and architecture (<a href="https://gepa-ai.github.io/gepa/">GEPA</a>, <a href="https://arxiv.org/abs/2605.19633">optimize_anything</a>); post-training that trains the harness and the model together (<a href="https://arxiv.org/abs/2508.04660">Multi-module GRPO</a>, <a href="https://arxiv.org/abs/2605.12484">Fast-Slow Training</a>); understanding how agents fail and behave in production (<a href="https://arxiv.org/abs/2503.13657">MAST</a>, <a href="https://arxiv.org/abs/2502.20315">LangProBe</a>); and reliability, with correct-by-construction guarantees for LLM-generated code (<a href="https://arxiv.org/abs/2306.10763">Monitor-Guided Decoding</a>, <a href="https://github.com/microsoft/multilspy">multilspy</a>).
-            All of this rests on a programming-languages view: prompts, harness, and weights form one program, amenable to the same analysis, transformation, and optimization as any other.
-          </p>
+            That spans reflective optimization of the harness around a model, its prompts, skills, and architecture (<a href="https://gepa-ai.github.io/gepa/">GEPA</a>, <a href="https://arxiv.org/abs/2605.19633">optimize_anything</a>); post-training that trains the harness and the model together (<a href="https://arxiv.org/abs/2508.04660">Multi-module GRPO</a>, <a href="https://arxiv.org/abs/2605.12484">Fast-Slow Training</a>); understanding how agents fail and behave in production (<a href="https://arxiv.org/abs/2503.13657">MAST</a>, <a href="https://arxiv.org/abs/2502.20315">LangProBe</a>); and reliability, with correct-by-construction guarantees for LLM-generated code (<a href="https://arxiv.org/abs/2306.10763">Monitor-Guided Decoding</a>, <a href="https://github.com/microsoft/multilspy">multilspy</a>).          </p>
           <div class="links" aria-label="Contact and profiles">
             <a class="pill primary" href="mailto:lakshyaaagrawal@berkeley.edu"><svg class="icon"><use href="#i-mail"/></svg>lakshyaaagrawal@berkeley.edu</a>
             <a class="pill" href="assets/CV.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-file"/></svg>CV</a>
@@ -166,7 +164,7 @@
           <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>,
           affiliated with the <a href="https://sky.cs.berkeley.edu/">Sky Computing Lab</a>, <a href="https://bair.berkeley.edu/">BAIR</a>, and the
           <a href="https://nlp.cs.berkeley.edu/">Berkeley NLP Group</a>.
-          My research spans post-training and reinforcement learning for models, reflective optimization for the harnesses around them, and the feedback that drives both: natural language, formal methods, and program state rather than a scalar reward alone.
+          My research is on post-training and reinforcement learning for language models, and on reflective optimization of the harnesses around them, so that AI systems can learn from richer feedback than a scalar reward, including natural language, program state, and formal methods.
           I am also very grateful for the opportunity to work with
           <a href="https://people.eecs.berkeley.edu/~istoica/">Prof. Ion Stoica</a>, <a href="https://people.eecs.berkeley.edu/~jegonzal/">Prof. Joseph Gonzalez</a>,
           <a href="https://scholar.google.com/citations?user=JSFmVQEAAAAJ&amp;hl=en">Prof. Alex Dimakis</a>, and <a href="https://omarkhattab.com/">Prof. Omar Khattab</a> (MIT), each of whom has shaped how I approach research.
@@ -174,14 +172,7 @@
         </p>
 
         <p>
-          Reinforcement learning compresses everything an agent did into a single number, and I think that throws away most of the signal.
-          An agent's trajectory (its reasoning, tool calls, compiler errors, profiler output, and the corrections people give it) is written in language, so my optimizers read it: they reflect on full execution traces, diagnose failures in words, and propose targeted fixes.
-        </p>
-
-        <p class="q">Language is a far richer learning medium than scalar rewards, and reflective search over text is a general-purpose way to make systems better.</p>
-
-        <p>
-          That idea grew out of my work on <a href="https://dspy.ai">DSPy</a> and became <a href="https://arxiv.org/abs/2507.19457">GEPA</a> (ICLR 2026 Oral), now the core optimizer in DSPy, MLflow, Pydantic AI, Google's Agent Development Kit, and Comet Opik, and in production at more than fifty organizations.
+          My work on <a href="https://dspy.ai">DSPy</a> led to <a href="https://arxiv.org/abs/2507.19457">GEPA</a> (ICLR 2026 Oral), an optimizer that improves LLM systems by reflecting in natural language on their execution traces. GEPA is now the core optimizer in DSPy, MLflow, Pydantic AI, Google's Agent Development Kit, and Comet Opik, and is used in production at more than fifty organizations.
           <a href="https://arxiv.org/abs/2605.19633">optimize_anything</a> generalizes the same loop to any text artifact, from CUDA kernels to agent architectures and scheduling policies.
           On the training side, I co-led <a href="https://arxiv.org/abs/2508.04660">dspy.GRPO</a>, the first GRPO pipeline for modular agents, and now work on <a href="https://arxiv.org/abs/2605.12484">Fast-Slow Training</a>, which co-optimizes the harness and the weights so that LLMs adapt continually without forgetting.
           The <a href="#research">Research</a> section below has the details.
@@ -190,13 +181,13 @@
         <p>
           Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), where I worked with
           <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and
-          <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a> on the correctness of LLM-generated code, which became <a href="https://arxiv.org/abs/2306.10763">Monitor-Guided Decoding</a> (NeurIPS 2023) and <a href="https://github.com/microsoft/multilspy">multilspy</a>.
+          <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a> on the correctness of LLM-generated code, which led to <a href="https://arxiv.org/abs/2306.10763">Monitor-Guided Decoding</a> (NeurIPS 2023) and <a href="https://github.com/microsoft/multilspy">multilspy</a>.
           I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department, and spent those years on language runtimes and transpilers: a <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> project now shipped with Maxima, the GraalVM runtime for the CAL dataflow language with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a> at EPFL, and my thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a> (more under <a href="#pl">Programming languages and systems</a>).
         </p>
 
         <p>
-          What drives me is watching an idea leave the paper: every project above is open source, and most of my research questions come from the people who run these systems and the failures they hit.
-          More in my <a href="assets/CV.pdf">CV</a>. To talk about research, <a href="mailto:lakshyaaagrawal@berkeley.edu">email me</a>; for anonymous feedback, use <a href="https://forms.gle/ZdAZDRqyPkofTVQP7">this form</a>.
+          I am passionate about open source software and about creating useful artifacts from my research; every project above is open source. I look forward to learning about the use cases and failure modes of these AI systems, which helps me articulate my research problems.
+          For more details, see my <a href="assets/CV.pdf">CV</a>. If you would like to chat about my work or about research in general, feel free to <a href="mailto:lakshyaaagrawal@berkeley.edu">email me</a>. For anonymous feedback, use <a href="https://forms.gle/ZdAZDRqyPkofTVQP7">this form</a>.
         </p>
 
         <p class="keywords"><b>Keywords:</b> Large Language Models, Agent Optimization, Reinforcement Learning, Continual Learning, AI4Code, Code Generation, Static Analysis, Programming Languages, Software Engineering</p>
@@ -210,6 +201,23 @@
         <p class="sub">Recent talks, papers, and releases.</p>
       </div>
       <div class="section-body">
+        <ul class="news digest">
+          <li><time datetime="2026-08">May–Aug 2026</time><div class="item">Talks at Etsy, Netflix Research, and the <a href="https://www.ai.engineer/worldsfair/schedule?q=Lakshya+Agrawal&amp;session=asn_slot_2026_07_01_main_stage_0900_2026_06_03t09_49_39_605z">AI Engineer World's Fair</a> main stage; guest lecture at UC San Diego (<a href="https://www.youtube.com/watch?v=vJ6F2duUC_0">recording</a>).</div></li>
+          <li><time datetime="2026-08">Jul–Aug 2026</time><div class="item">GEPA releases: <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything omni</a>, <a href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/">parallel proposals</a> (3–4× faster), and <a href="https://x.com/BhavyaChopra1/status/2089780200968163436">observability and steerability tools</a>.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item"><a href="https://arxiv.org/abs/2512.04123">Measuring Agents in Production</a>, <b>Oral at ICML 2026</b>; <a href="https://arxiv.org/abs/2604.04247">Combee</a> accepted to COLM 2026.</div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="item">Essay: <a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a>, on the enterprise AI learning loop.</div></li>
+          <li><time datetime="2026-06">Mar–Jun 2026</time><div class="item">GEPA in <a href="https://github.com/NousResearch/hermes-agent-self-evolution/blob/main/reports/phase1_validation_report.pdf">Nous Research</a>'s agent self-evolution and in Microsoft AI's <a href="https://x.com/mustafasuleyman/status/2061880164498428188">MAI-Thinking-1</a> data pipeline.</div></li>
+          <li><time datetime="2026-05">May 2026</time><div class="item"><a href="https://arxiv.org/abs/2605.12484">Learning, Fast and Slow</a> released; two <b>Industry Spotlight Awards</b> at <a href="https://www.caisconf.org/">ACM CAIS 2026</a> (<a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">talk</a>).</div></li>
+          <li><time datetime="2026-04">Jan–Apr 2026</time><div class="item"><b>GEPA accepted to ICLR 2026 as an Oral</b> and presented in Rio de Janeiro (<a href="https://www.youtube.com/watch?v=HbGah-uP1fI">recording</a>).</div></li>
+          <li><time datetime="2026-02">Feb 2026</time><div class="item"><a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">optimize_anything</a> and <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/automatically-learning-skills-for-coding-agents/">gskill</a> released; <a href="https://gepa-ai.github.io/gepa/blog/">GEPA blog</a> launched.</div></li>
+          <li><time datetime="2025-12">Dec 2025</time><div class="item">NeurIPS 2025: <a href="https://arxiv.org/abs/2503.13657">Why Do Multi-Agent LLM Systems Fail?</a> <b>Spotlight</b>, GEPA at the <a href="https://neurips.cc/virtual/2025/workshop/109559">FoRLM</a> workshop; <a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ">Delta Podcast</a> interview.</div></li>
+          <li><time datetime="2025-11">Oct–Nov 2025</time><div class="item"><a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/">Amazon AI PhD Fellow</a>; <a href="https://www.laude.org/">Laude Institute</a> Open Research Resident and <a href="https://slingshots.laude.org/">Slingshot</a>; NeurIPS 2025 <b>Top Reviewer</b>; GEPA in the <a href="https://cookbook.openai.com/examples/partners/self_evolving_agents/autonomous_agent_retraining">OpenAI Cookbook</a> with Bain &amp; Company.</div></li>
+          <li><time datetime="2025-09">Jul–Sep 2025</time><div class="item"><a href="https://arxiv.org/abs/2507.19457">GEPA paper</a> and <a href="https://github.com/gepa-ai/gepa">package</a> released; covered by <a href="https://venturebeat.com/ai/gepa-optimizes-llms-without-costly-reinforcement-learning">VentureBeat</a>, <i>The Batch</i>, and the <a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Weaviate Podcast</a>; Databricks reports <a href="https://www.databricks.com/blog/building-state-art-enterprise-agents-90x-cheaper-automated-prompt-optimization">~90× lower cost</a>; <a href="https://aclanthology.org/2025.findings-emnlp.1172/">LangProBe</a> at EMNLP 2025 Findings.</div></li>
+          <li><time datetime="2025-05">2023–May 2025</time><div class="item"><a href="https://x.com/lateinteraction/status/1919428454761553994">dspy.GRPO</a> released (May 2025); AMD talk (Jan 2025); PhD at UC Berkeley begins (Aug 2024); <a href="https://neurips.cc/virtual/2023/poster/70362">Monitor-Guided Decoding</a> at NeurIPS 2023; <a href="https://www.credly.com/badges/6d4c10c9-79f8-409c-aa2a-83c3871c56b3">first place, Microsoft Global Hackathon</a> (2023).</div></li>
+        </ul>
+
+        <details class="more">
+          <summary><span class="when-closed">Full list, one event per line</span><span class="when-open">Back to the summary</span><svg class="icon"><use href="#i-chev"/></svg></summary>
         <ul class="news">
           <li><time datetime="2026-08">Aug 2026</time><div class="item">Invited talk at Etsy's <b>AI Stitch</b> series: <i>From Prompts to Programs: Text Optimization with GEPA and DSPy</i>.</div></li>
           <li><time datetime="2026-08">Aug 2026</time><div class="item">Released <a href="https://x.com/BhavyaChopra1/status/2089780200968163436">observability and steerability tools</a> for GEPA and optimize_anything, re-architecting GEPA around HCI principles so that people and agents alike can inspect and steer an optimization run.</div></li>
@@ -224,11 +232,6 @@
           <li><time datetime="2026-05">May 2026</time><div class="item"><a href="https://arxiv.org/abs/2605.19633">optimize_anything</a> and <a href="https://arxiv.org/abs/2508.04660">Multi-module GRPO</a> both receive <b>Industry Spotlight Awards</b> at the inaugural <a href="https://www.caisconf.org/">ACM CAIS 2026</a> (<a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">talk</a>).</div></li>
           <li><time datetime="2026-05">May 2026</time><div class="item">Released <a href="https://arxiv.org/abs/2605.12484">Learning, Fast and Slow</a>, introducing Fast-Slow Training for continual learning in LLMs.</div></li>
           <li><time datetime="2026-05">May 2026</time><div class="item">Invited talk on GEPA and text optimization in <a href="https://dsc.ucsd.edu/~arunkk/">Prof. Arun Kumar</a>'s CSE/DSC 234 at UC San Diego on May 11 (<a href="https://www.youtube.com/watch?v=vJ6F2duUC_0">recording</a>).</div></li>
-        </ul>
-
-        <details class="more">
-          <summary><span class="when-closed">Older news</span><span class="when-open">Fewer</span><svg class="icon"><use href="#i-chev"/></svg></summary>
-          <ul class="news">
             <li><time datetime="2026-04">Apr 2026</time><div class="item">Presented GEPA as an <b>Oral at ICLR 2026</b> in Rio de Janeiro (<a href="https://www.youtube.com/watch?v=HbGah-uP1fI">recording</a>).</div></li>
             <li><time datetime="2026-03">Mar 2026</time><div class="item">Nous Research <a href="https://github.com/NousResearch/hermes-agent-self-evolution/blob/main/reports/phase1_validation_report.pdf">reports</a> using GEPA and DSPy for agent self-evolution and skill optimization, with a 39.5% gain.</div></li>
             <li><time datetime="2026-02">Feb 2026</time><div class="item">Released <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">optimize_anything</a>, a universal API for optimizing any text parameter, and <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/automatically-learning-skills-for-coding-agents/">gskill</a>, which learns skills for coding agents automatically. Launched the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA blog</a>.</div></li>
