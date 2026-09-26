@@ -94,6 +94,12 @@ summary::-webkit-details-marker { display: none; }
 .research-status:empty { display: none; }
 .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 50px; }
 .work { border-bottom: 1px solid var(--line); padding: 25px 0 23px; min-width: 0; scroll-margin-top: 110px; }
+.work-visual { position: relative; display: grid; place-items: center; height: 174px; margin-bottom: 20px; padding: 10px; background: #fff; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.work-visual img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.work-visual > span { position: absolute; right: 7px; bottom: 5px; background: #fff; color: #225a77; border-radius: 3px; padding: 0 4px; font-size: 13px; }
+.work-visual:hover { border-color: var(--accent); }
+.video-visual { background: #f4f2ed; padding: 0; }
+.video-visual img { object-fit: cover; }
 .work-category { font-size: 9px; letter-spacing: 1.25px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .work h3 { font-size: 25px; line-height: 1.22; }
 .work-venue { display: flex; align-items: baseline; flex-wrap: wrap; gap: 5px 11px; font-size: 10px; color: var(--muted); margin: 12px 0; }
@@ -115,6 +121,14 @@ summary::-webkit-details-marker { display: none; }
 .text-button:hover { text-decoration: underline; text-underline-offset: 4px; }
 .talks-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 50px; }
 .featured-talk { background: var(--surface); padding: 28px 30px; border-radius: 3px; display: flex; flex-direction: column; align-items: flex-start; }
+.talk-cover { position: relative; display: block; align-self: stretch; margin: -28px -30px 24px; border-radius: 3px 3px 0 0; overflow: hidden; }
+.talk-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.play-badge { position: absolute; right: 16px; bottom: 16px; display: grid; place-items: center; width: 40px; height: 40px; padding-left: 2px; background: #ffffffed; color: #225a77; border-radius: 50%; font-size: 15px; box-shadow: 0 2px 12px #0003; }
+.podcast-cover { display: block; margin-bottom: 12px; }
+.podcast-cover img { display: block; width: 180px; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 3px; }
+.research-photo { margin: 22px 0; }
+.research-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.research-photo figcaption { font-size: 10px; color: var(--muted); margin-top: 7px; }
 .featured-talk h3 { font-size: 29px; margin-top: 16px; }
 .featured-talk p { font-size: 12px; color: var(--muted); margin: 18px 0; }
 .watch-link { margin-top: auto; font-size: 12px; padding-top: 8px; }
@@ -169,6 +183,7 @@ summary::-webkit-details-marker { display: none; }
   .background-grid { gap: 35px; }
   .work h3 { font-size: 23px; }
   .featured-talk { padding: 24px; }
+  .talk-cover { margin: -24px -24px 20px; }
   .featured-talk h3 { font-size: 26px; }
 }
 @media (max-width: 700px) {
@@ -214,6 +229,10 @@ summary::-webkit-details-marker { display: none; }
   .text-button { font-size: 11px; }
   .talks-grid { gap: 26px; }
   .featured-talk { padding: 26px; }
+  .talk-cover { margin: -26px -26px 22px; }
+  .work-visual { height: 165px; margin-bottom: 18px; }
+  .podcast-cover { float: right; width: 112px; margin: 0 0 10px 14px; }
+  .podcast::after { content: ""; display: block; clear: both; }
   .featured-talk h3 { font-size: 28px; }
   .featured-talk p, .writing-list p { font-size: 12px; }
   .background-grid { gap: 30px; }
@@ -242,6 +261,7 @@ summary::-webkit-details-marker { display: none; }
   .intro { padding-top: 0; }
   .work[hidden] { display: block !important; }
   .work { break-inside: avoid; }
+  .work-visual { height: 120px; }
   .section, .research-section { padding-block: 24px; }
   a { text-decoration: none; }
 }

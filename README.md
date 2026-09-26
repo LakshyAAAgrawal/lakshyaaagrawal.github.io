@@ -12,6 +12,7 @@ The site is a single hand-written static page with no build step or framework.
 | `css/site.css` | Styling; light/dark themes via CSS custom properties |
 | `js/site.js` | Theme preference, research filters, direct-link handling, and navigation state (progressive enhancement only) |
 | `images/` | Portrait (`profile-640.jpg`, `profile-1024.jpg`, source `profile.png`) |
+| `images/research/`, `images/talks/`, `images/sides/` | Research figures and video thumbnails; provenance in `images/SOURCES.md` |
 | `assets/CV.pdf` | Current CV |
 | `assets/papers/` | Locally hosted PDFs for older papers |
 | `assets/logos/` | GEPA logo variants |
@@ -31,7 +32,7 @@ The site is a single hand-written static page with no build step or framework.
 
 ## Design and behavior
 
-The homepage uses a two-column research layout on desktop and a single column on mobile, with a warm light theme and a system-aware dark theme. The mobile portrait matches the width of the name using CSS. Motion honors `prefers-reduced-motion`; controls are keyboard accessible. Legacy section anchors still resolve, and direct links to unselected projects reveal those entries. The complete collection remains available without JavaScript and when printing.
+The homepage uses a two-column research layout on desktop and a single column on mobile, with a warm light theme and a system-aware dark theme. Research figures link to larger views; talks use locally served video thumbnails. Images below the introduction load lazily. The mobile portrait matches the width of the name using CSS. Motion honors `prefers-reduced-motion`; controls are keyboard accessible. Legacy section anchors still resolve, and direct links to unselected projects reveal those entries. The complete collection remains available without JavaScript and when printing.
 
 The site keeps Google Analytics and the hidden MapMyVisitors tracker. No private source notes or session transcripts are included. The `site-redesign` branch is for development; `master` is the existing deployment branch.
 
@@ -41,4 +42,4 @@ Earlier versions of this site were built on the [minimal-research-theme](https:/
 
 ## Legacy files
 
-`d3/`, `nextprot/`, `javascript/`, `javascripts/`, `stylesheets/`, `fonts/`, `cites/`, `css/academicons*.css`, `css/custom.css`, and the older `images/` subfolders (`sides/`, `logos/`, `nicons/`, `icons/`) are kept from the previous version of the site. Nothing in `index.html` depends on them, but external links may, so leave them in place.
+`d3/`, `nextprot/`, `javascript/`, `javascripts/`, `stylesheets/`, `fonts/`, `cites/`, `css/academicons*.css`, `css/custom.css`, and the older `images/` subfolders (`logos/`, `nicons/`, `icons/`) are kept from the previous version of the site. Nothing in `index.html` depends on them, but external links may, so leave them in place. The research figures in `images/sides/` and the NeurIPS photo in `assets/carousel_images/` are actively used by the current design.

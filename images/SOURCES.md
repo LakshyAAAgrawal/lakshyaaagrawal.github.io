@@ -1,0 +1,15 @@
+# Website imagery
+
+Research visuals stay attached to their project entries. Existing figures in `sides/` and personal photographs in `assets/carousel_images/` are preserved from the previous website.
+
+New local assets:
+
+- `research/fst.png`: [Fast-Slow Training blog](https://gepa-ai.github.io/gepa/blog/2026/05/11/learning-fast-and-slow/), `fst_diagram.png`. Resized to 1800 pixels wide for web delivery.
+- `research/optimize-anything.png`: [optimize_anything introduction](https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/), `header_image.png`. Resized to 1600 pixels wide.
+- `research/agents-in-production.png`: [Measuring Agents in Production, arXiv v1](https://arxiv.org/html/2512.04123v1), `agent_architecture_definition.png`.
+- `research/mmgrpo-talk.jpg`: thumbnail of [Noah Ziems’s ACM CAIS presentation](https://www.youtube.com/watch?v=JT9JYNFrs80). Used only with the research entry, not as a talk by Lakshya.
+- `talks/ai-engineer.jpg`: thumbnail of [Lakshya’s AI Engineer World’s Fair talk](https://www.youtube.com/watch?v=OA-Mc60Rboo).
+- `talks/delta.jpg`: thumbnail of [Delta Podcast, episode 52](https://www.youtube.com/watch?v=HtxnqtTQKuQ).
+- `talks/weaviate.jpg`: thumbnail of [Weaviate Podcast, episode 127](https://www.youtube.com/watch?v=fREQrxhBSk0).
+
+YouTube thumbnails are served locally and link to their respective videos; no video embeds or autoplay are used. Scientific figures retain their aspect ratios and link to a larger view. Alternate text describes the subject of each visual.
