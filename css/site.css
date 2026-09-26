@@ -45,8 +45,7 @@ code { font-family: inherit; font-size: inherit; }
 .container { width: min(1080px, calc(100% - 96px)); margin-inline: auto; }
 .site-header { position: sticky; top: 0; z-index: 5; background: var(--bg); }
 .header-inner { min-height: 78px; display: flex; align-items: center; gap: 28px; border-bottom: 1px solid var(--line); }
-.wordmark { color: var(--text); font: 500 24px var(--serif); letter-spacing: -1px; margin-right: auto; }
-.wordmark span { color: var(--accent); }
+.wordmark { color: var(--text); font: 500 24px var(--serif); letter-spacing: -.5px; margin-right: auto; }
 .wordmark:hover { text-decoration: none; }
 nav { display: flex; gap: 30px; align-items: center; }
 nav a { font-size: 13px; color: var(--muted); padding-block: 12px; }
@@ -173,13 +172,13 @@ summary::-webkit-details-marker { display: none; }
   .featured-talk h3 { font-size: 26px; }
 }
 @media (max-width: 700px) {
-  html { scroll-padding-top: 86px; }
+  html { scroll-padding-top: 110px; }
   .container { width: calc(100% - 40px); }
-  .header-inner { min-height: 64px; gap: 14px; }
+  .header-inner { display: grid; grid-template-columns: 1fr auto; gap: 0 14px; padding-block: 10px; }
   .wordmark { font-size: 21px; }
-  nav { gap: 18px; }
-  nav a { font-size: 12px; }
-  .theme-toggle { width: 30px; height: 30px; flex-shrink: 0; }
+  nav { grid-column: 1 / -1; grid-row: 2; gap: 26px; }
+  nav a { font-size: 12px; padding-block: 6px; }
+  .theme-toggle { grid-column: 2; grid-row: 1; width: 30px; height: 30px; }
   .intro { display: block; padding: 34px 0 27px; }
   .identity { display: grid; width: max-content; max-width: 100%; grid-template-columns: max-content; margin: 0 auto 25px; }
   .identity h1 { grid-column: 1; grid-row: 2; font-size: clamp(27px, 7.4vw, 43px); white-space: nowrap; letter-spacing: -1.2px; margin: 18px 0 0; }

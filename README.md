@@ -21,7 +21,7 @@ The site is a single hand-written static page with no build step or framework.
 ## Editing
 
 - Research is stored once, as static `<article class="work">` elements in `index.html`. Copy an entry and give it a unique `id`, `data-topics`, and `data-selected="true"` or `"false"`.
-- Topic values are `harness`, `training`, `evaluation`, `code`, and `systems`; an entry may have more than one, separated by spaces. Keep the initial selection focused. All 18 entries remain readable without JavaScript.
+- Topic values are `harness`, `training`, `evaluation`, `code`, and `systems`; an entry may have more than one, separated by spaces. Keep the initial selection focused. All 19 entries remain readable without JavaScript.
 - Keep each project's summary, publication metadata, author list, code, and related links together. Full authorship is available in the entry's native disclosure. Do not add a second publications or software list for the same work.
 - Talks have their own section; only presentations by Lakshya belong there. Historical announcements live in the expandable news archive.
 - Update the total in the “Explore all” button when adding a project. Filter counts are calculated automatically.
