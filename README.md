@@ -8,9 +8,9 @@ The site is a single hand-written static page with no build step or framework.
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | All content: bio, news, research, publications, talks, software, honors |
+| `index.html` | Bio; a unified papers/projects collection; talks/writing; background and honors; expandable news archive |
 | `css/site.css` | Styling; light/dark themes via CSS custom properties |
-| `js/site.js` | Theme toggle and external-link handling (progressive enhancement only) |
+| `js/site.js` | Theme preference, research filters, direct-link handling, and navigation state (progressive enhancement only) |
 | `images/` | Portrait (`profile-640.jpg`, `profile-1024.jpg`, source `profile.png`) |
 | `assets/CV.pdf` | Current CV |
 | `assets/papers/` | Locally hosted PDFs for older papers |
@@ -20,9 +20,20 @@ The site is a single hand-written static page with no build step or framework.
 
 ## Editing
 
-- News, publications, and talks are plain HTML lists in `index.html`; copy an existing `<li>` or `.row` block.
+- Research is stored once, as static `<article class="work">` elements in `index.html`. Copy an entry and give it a unique `id`, `data-topics`, and `data-selected="true"` or `"false"`.
+- Topic values are `harness`, `training`, `evaluation`, `code`, and `systems`; an entry may have more than one, separated by spaces. Keep the initial selection focused. All 18 entries remain readable without JavaScript.
+- Keep each project's summary, publication metadata, author list, code, and related links together. Full authorship is available in the entry's native disclosure. Do not add a second publications or software list for the same work.
+- Talks have their own section; only presentations by Lakshya belong there. Historical announcements live in the expandable news archive.
+- Update the total in the “Explore all” button when adding a project. Filter counts are calculated automatically.
 - Update the "Last updated" line in the footer and `lastmod` in `sitemap.xml` when publishing.
 - To preview locally: `python3 -m http.server 8000` in the repository root, then open <http://localhost:8000/>.
+- For a preview listening on local network interfaces, use `python3 -m http.server 8000 --bind 0.0.0.0`. Network/firewall settings still determine access from another device.
+
+## Design and behavior
+
+The homepage uses a two-column research layout on desktop and a single column on mobile, with a warm light theme and a system-aware dark theme. The mobile portrait matches the width of the name using CSS. Motion honors `prefers-reduced-motion`; controls are keyboard accessible. Legacy section anchors still resolve, and direct links to unselected projects reveal those entries. The complete collection remains available without JavaScript and when printing.
+
+The site keeps Google Analytics and the hidden MapMyVisitors tracker. No private source notes or session transcripts are included. The `site-redesign` branch is for development; `master` is the existing deployment branch.
 
 ## Acknowledgements
 
