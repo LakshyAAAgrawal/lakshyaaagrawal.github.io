@@ -17,7 +17,7 @@ New local assets:
 - `talks/laude-podcast.jpg`: thumbnail of [the podcast with Andy Konwinski](https://www.youtube.com/watch?v=mmpW36WdFbI&t=2707s), linking to Lakshya’s segment at 45:07–48:36.
 - `talks/laude-frontier.jpg`: thumbnail of [Laude Open Frontier](https://www.youtube.com/watch?v=rePCdzfITKc&t=1131), linking to Lakshya’s GEPA presentation at 18:51–36:31.
 
-The personal essay uses a journal icon; GEPA posts use their own figures or the project logo.
+The personal essay uses the user-supplied `HK1FizDbIAAKyB7.jpeg` from Downloads, copied to `blogs/owning-token-capital.jpg` and resized to 900 pixels wide. GEPA posts use their own figures or the project logo.
 
 YouTube thumbnails are served locally and link to their respective videos; no video embeds or autoplay are used. Scientific figures retain their aspect ratios and link to a larger view. Alternate text describes the subject of each visual.
 
@@ -28,6 +28,8 @@ Inline SVG icons in `index.html` are from [Bootstrap Icons](https://github.com/t
 ## Blog thumbnails
 
 The blog collection was checked against [GEPA’s sitemap](https://gepa-ai.github.io/gepa/sitemap.xml) on September 26, 2026. New thumbnails are resized to at most 640 pixels, retain their native aspect ratios, and link to the corresponding post:
+
+The displayed collection is restricted to posts whose [source front matter](https://github.com/gepa-ai/gepa/tree/main/docs/docs/blog/posts) lists `lakshya` as an author. The two guest posts (`confidence-adapter-benchmark` and `bridging-the-subjectivity-gap`) are not displayed; their previously downloaded thumbnails are retained as unused assets.
 - `blogs/subjectivity.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-09-17-bridging-the-subjectivity-gap/images/subjectivity-gap.png).
 - `blogs/parallel.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-07-30-parallel-proposals/images/throughput.png).
 - `blogs/omni.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-07-22-optimize-anything-omni/images/omni_bar.png).

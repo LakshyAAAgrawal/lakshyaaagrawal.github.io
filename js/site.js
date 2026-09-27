@@ -61,22 +61,21 @@
   news.addEventListener('toggle', placeNews);
   placeNews();
 
-  // Auto-advance only while visible. Pause on hover/focus and respect reduced motion.
+  // Auto-advance while visible; vertical page scrolling must not stop playback.
   var gallery = document.querySelector('.photo-gallery');
   var galleryControls = document.querySelector('.gallery-controls');
   var galleryButtons = Array.from(galleryControls.querySelectorAll('[data-gallery-step]'));
   var playback = galleryControls.querySelector('.gallery-playback');
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var playing = !reducedMotion.matches;
-  var galleryVisible = false;
-  var hovering = false;
+  var galleryVisible = !('IntersectionObserver' in window);
   var focused = false;
   var galleryTimer;
   galleryControls.hidden = false;
   function scheduleGallery() {
     clearTimeout(galleryTimer);
-    if (playing && galleryVisible && !hovering && !focused && !document.hidden) {
-      galleryTimer = setTimeout(function () { advanceGallery(1); scheduleGallery(); }, 6000);
+    if (playing && galleryVisible && !focused && !document.hidden) {
+      galleryTimer = setTimeout(function () { advanceGallery(1); scheduleGallery(); }, 4000);
     }
   }
   function updatePlayback() {
@@ -100,14 +99,14 @@
     });
   });
   playback.addEventListener('click', function () { playing = !playing; updatePlayback(); });
-  gallery.addEventListener('mouseenter', function () { hovering = true; scheduleGallery(); });
-  gallery.addEventListener('mouseleave', function () { hovering = false; scheduleGallery(); });
   gallery.addEventListener('focusin', function () { focused = true; scheduleGallery(); });
   gallery.addEventListener('focusout', function (event) {
     focused = gallery.contains(event.relatedTarget); scheduleGallery();
   });
-  gallery.addEventListener('touchstart', function () { playing = false; updatePlayback(); }, { passive: true });
-  gallery.addEventListener('wheel', function () { playing = false; updatePlayback(); }, { passive: true });
+  gallery.addEventListener('wheel', function (event) {
+    // Only deliberate horizontal browsing pauses the carousel, never page scroll.
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) { playing = false; updatePlayback(); }
+  }, { passive: true });
   document.addEventListener('visibilitychange', scheduleGallery);
   if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', function () {
     if (reducedMotion.matches) { playing = false; updatePlayback(); }

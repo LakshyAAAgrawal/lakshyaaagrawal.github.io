@@ -128,6 +128,8 @@ summary::-webkit-details-marker { display: none; }
 .talk-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .play-badge { position: absolute; right: 6px; bottom: 6px; display: grid; place-items: center; width: 24px; height: 24px; padding-left: 2px; background: #fffffff0; color: #225a77; border-radius: 50%; font-size: 10px; }
 .talk-copy { min-width: 0; }
+.talk-mark { display: grid; place-items: center; width: 100%; aspect-ratio: 16 / 9; border-radius: 3px; background: var(--surface); color: var(--muted); }
+.talk-mark .link-icon { width: 28px; height: 28px; }
 .talk-copy .eyebrow { font-size: 9px; letter-spacing: 1px; margin-bottom: 7px; }
 .talk-copy p { color: var(--muted); margin: 8px 0; }
 .talk-links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12px; }
@@ -199,13 +201,13 @@ summary::-webkit-details-marker { display: none; }
 .blog-entry .eyebrow { font-size: 9px; letter-spacing: 1px; margin-bottom: 5px; }
 .blog-entry p { color: var(--muted); margin: 5px 0 0; }
 .blog-visual { display: block; }
-.blog-visual img { display: block; width: 100%; max-height: 72px; object-fit: contain; }
+.blog-visual img { display: block; width: 100%; height: auto; max-height: 72px; object-fit: contain; }
 .blog-visual.essay-cover { display: grid; min-height: 70px; }
 .blog-visual .link-icon { width: 28px; height: 28px; }
 .media-coverage { margin-top: 28px; }
 .media-coverage h3 { display: flex; align-items: center; gap: 10px; }
 .media-coverage h3 .link-icon { width: 22px; height: 22px; }
-.media-coverage ul { padding: 0; list-style: none; margin-bottom: 0; }
+.media-coverage ul { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 36px; padding: 0; list-style: none; margin-bottom: 0; }
 .media-coverage li { display: grid; grid-template-columns: 95px 1fr; gap: 14px; margin-top: 10px; }
 .media-coverage li > span { color: var(--muted); font-size: 12px; }
 .affiliation-logos { display: flex; align-items: center; gap: 22px; margin: 22px 0; }
@@ -254,6 +256,7 @@ summary::-webkit-details-marker { display: none; }
   .research-controls { gap: 7px; }
   .research-section { padding-bottom: 0; }
   .talks-feature, .blog-list { grid-template-columns: 1fr; }
+  .media-coverage ul { grid-template-columns: 1fr; }
   .talks-feature { gap: 26px; }
   .talk-highlights { gap: 20px; }
   .featured-talk-card { display: block; }
