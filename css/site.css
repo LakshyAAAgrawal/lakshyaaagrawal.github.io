@@ -89,11 +89,17 @@ summary::-webkit-details-marker { display: none; }
 
 /* One paper per row. Figures support entries rather than framing cards. */
 .work-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.project-list { display: grid; grid-template-columns: minmax(0, 1fr); }
+.other-contributions { margin-top: 12px; }
 .work { min-width: 0; padding: 17px 0; scroll-margin-top: 24px; }
 .work:has(.work-visual) { display: grid; grid-template-columns: 155px minmax(0, 1fr); column-gap: 24px; align-content: start; }
 .work:has(.work-visual) > :not(.work-visual) { grid-column: 2; }
 .work-visual { grid-column: 1; grid-row: 1 / span 6; align-self: start; position: relative; display: block; width: 100%; margin-top: 5px; background: #fff; }
 .work-visual img { display: block; width: 100%; height: auto; }
+.paper-cover { padding: 12px 10px; border: 1px solid var(--line); color: #252525; line-height: 1.35; }
+.paper-cover-venue { font-size: 9px; color: #606060; margin-bottom: 12px; }
+.paper-cover-title { font-size: 15px; font-weight: 600; margin-bottom: 7px; }
+.paper-cover-subtitle { font-size: 10px; }
 .work-visual > span { position: absolute; right: 4px; bottom: 3px; padding: 0 3px; background: #fff; color: #205b93; font-size: 12px; }
 .work-category { color: var(--muted); font-size: 12px; margin-bottom: 3px; }
 .work h3 { font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
@@ -156,7 +162,13 @@ summary::-webkit-details-marker { display: none; }
 
 /* Background subsections follow one another, not competing columns. */
 .background-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
-.background h3 { margin-bottom: 10px; }
+.background .section-heading { margin-bottom: 12px; }
+.background h3 { font-size: 16px; margin-bottom: 6px; }
+.background p { margin-bottom: 8px; }
+.background .service, .background .beyond { margin-top: 14px; }
+.background .affiliation-logos { margin: 10px 0; }
+.background .affiliation-logos img { height: 30px; }
+.honors-section .section-heading { margin-bottom: 10px; }
 .service { margin-top: 24px; }
 .recognition { list-style: none; padding: 0; margin: 0; }
 .recognition li { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 14px; padding: 5px 0; }

@@ -44,7 +44,7 @@
   </script>
 
   <!-- System fonts keep the page lightweight and typographically consistent. -->
-  <link rel="stylesheet" href="css/site.css?v=20260926-5">
+  <link rel="stylesheet" href="css/site.css?v=20260926-6">
 
   <noscript><style>.work[hidden] { display: block !important; } .research-status { display: none; }</style></noscript>
 
@@ -103,7 +103,7 @@
   <div class="container header-inner">
     <a class="wordmark" href="#top" aria-label="Lakshya A Agrawal, home">Lakshya A Agrawal</a>
     <nav aria-label="Main navigation">
-      <a href="#research">Research</a><a href="#talks">Talks</a><a href="#blogs">Blogs</a><a href="#background">Background</a>
+      <a href="#research">Publications</a><a href="#software">Projects</a><a href="#talks">Talks</a><a href="#blogs">Blogs</a><a href="#honors">Honors</a><a href="#background">Background</a>
     </nav>
     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" hidden><span class="theme-symbol" aria-hidden="true">◐</span></button>
   </div>
@@ -175,10 +175,10 @@
   </details>
 
   <section class="research-section" id="research" aria-labelledby="research-heading">
-    <div class="section-heading"><div><span class="eyebrow">01 / Research</span><h2 id="research-heading">Papers &amp; projects</h2></div></div>
-    <span class="anchor-alias" id="publications"></span><span class="anchor-alias" id="software"></span><span class="anchor-alias" id="harness"></span><span class="anchor-alias" id="post-training"></span><span class="anchor-alias" id="evaluation"></span><span class="anchor-alias" id="ai4code"></span><span class="anchor-alias" id="pl"></span>
+    <div class="section-heading"><div><span class="eyebrow">01 / Research</span><h2 id="research-heading">Publications</h2></div></div>
+    <span class="anchor-alias" id="publications"></span><span class="anchor-alias" id="harness"></span><span class="anchor-alias" id="post-training"></span><span class="anchor-alias" id="evaluation"></span><span class="anchor-alias" id="ai4code"></span><span class="anchor-alias" id="pl"></span>
     <div class="research-controls" hidden>
-      <div class="view-switch" role="group" aria-label="Research selection"><button type="button" data-filter="selected" aria-pressed="true">Selected</button><button type="button" data-filter="all" aria-pressed="false">All work</button></div>
+      <div class="view-switch" role="group" aria-label="Research selection"><button type="button" data-filter="selected" aria-pressed="true">Selected</button><button type="button" data-filter="all" aria-pressed="false">All publications</button></div>
       <div class="topic-filters" role="group" aria-label="Filter research by topic">
         <button type="button" data-filter="harness" aria-pressed="false">Harness optimization</button>
         <button type="button" data-filter="training" aria-pressed="false">Model training &amp; RL</button>
@@ -187,7 +187,7 @@
         <button type="button" data-filter="systems" aria-pressed="false">PL &amp; systems</button>
       </div>
     </div>
-    <div class="research-status" aria-live="polite" aria-atomic="true">Selected work · 7 of 19 papers &amp; projects</div>
+    <div class="research-status" aria-live="polite" aria-atomic="true">Selected publications · 7 of 14</div>
     <div class="work-grid"><article class="work" id="gepa" data-topics="harness" data-selected="true">
   <a class="work-visual" href="images/sides/gepa.png" target="_blank" rel="noopener" aria-label="Enlarge research figure for gepa"><img src="images/sides/gepa.png" alt="GEPA, MIPROv2, and GRPO compared by rollout budget on HotpotQA" width="1232" height="882" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Harness optimization</div>
@@ -276,14 +276,9 @@
     <p class="authors"><span class="me">Lakshya A Agrawal</span>, Aditya Kanade, Navin Goyal, Shuvendu Lahiri, Sriram Rajamani</p><p>Also filed as US Patent Application 18/680,100.</p>
   </details>
 </article>
-<article class="work" id="multilspy" data-topics="systems code" data-selected="false" hidden>
-  <div class="work-category">Programming languages &amp; systems · AI for code</div>
-  <h3><a href="https://github.com/microsoft/multilspy">multilspy</a></h3>
-  <p class="work-venue">Open-source software · Creator</p>
-  <p class="work-description">A Python library for working with language servers across programming languages. It handles server setup and communication, making static analysis, code completion, definitions, and references accessible to developer tools and coding agents.</p>
-  <div class="work-links"><a href="https://github.com/microsoft/multilspy"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code &amp; documentation</a><a href="#mgd">Related paper</a></div>
-</article>
+
 <article class="work" id="gskill" data-topics="harness code" data-selected="false" hidden>
+  <a class="work-visual" href="images/blogs/skills.png" target="_blank" rel="noopener" aria-label="Enlarge: gskill pipeline for generating tasks and learning repository-specific skills"><img src="images/blogs/skills.png" alt="gskill pipeline for generating tasks and learning repository-specific skills" width="640" height="327" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Harness optimization · AI for code</div>
   <h3><a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/automatically-learning-skills-for-coding-agents/">Automatically Learning Skills for Coding Agents</a></h3>
   <p class="work-venue">Technical report · 2026</p>
@@ -294,6 +289,7 @@
   </details>
 </article>
 <article class="work" id="combee" data-topics="harness" data-selected="false" hidden>
+  <a class="work-visual" href="images/blogs/combee.png" target="_blank" rel="noopener" aria-label="Enlarge: Combee architecture for parallel prompt learning"><img src="images/blogs/combee.png" alt="Combee architecture for parallel prompt learning" width="640" height="292" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Harness optimization</div>
   <h3><a href="https://arxiv.org/abs/2604.04247">Combee: Scaling Prompt Learning for Self-Improving Language Model Agents</a></h3>
   <p class="work-venue">COLM 2026</p>
@@ -303,14 +299,9 @@
     <p class="authors">Hanchen Li, Runyuan He, Qizheng Zhang, Changxiu Ji, Qiuyang Mang, Xiaokun Chen, <span class="me">Lakshya A Agrawal</span>, Wei-Liang Liao, Eric Yang, Alvin Cheung, James Zou, Kunle Olukotun, Ion Stoica, Joseph E. Gonzalez</p>
   </details>
 </article>
-<article class="work" id="omni" data-topics="harness" data-selected="false" hidden>
-  <div class="work-category">Harness optimization</div>
-  <h3><a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything omni</a></h3>
-  <p class="work-venue">Software &amp; blog · 2026</p>
-  <p class="work-description">A meta-optimizer that combines GEPA, AutoResearch, and Meta-Harness, exploring across engines and continuing from the most promising results.</p>
-  <div class="work-links"><a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-journal-text"></use></svg>Blog &amp; documentation</a></div>
-</article>
+
 <article class="work" id="knowing-is-not-seeing" data-topics="evaluation" data-selected="false" hidden>
+  <a class="work-visual paper-cover" href="https://sites.google.com/view/icbinb-2026/papers" aria-label="Read Knowing Is Not Seeing: Limits of Physical Problem Solving in VLMs"><div class="paper-cover-venue">ICLR 2026 Workshop</div><div class="paper-cover-title">Knowing Is Not Seeing</div><div class="paper-cover-subtitle">Limits of Physical Problem Solving in VLMs</div></a>
   <div class="work-category">Understanding &amp; evaluating models</div>
   <h3><a href="https://sites.google.com/view/icbinb-2026/papers">Knowing Is Not Seeing: Limits of Physical Problem Solving in VLMs</a></h3>
   <p class="work-venue">ICLR 2026 Workshop</p>
@@ -321,6 +312,7 @@
   </details>
 </article>
 <article class="work" id="barbarians" data-topics="systems" data-selected="false" hidden>
+  <a class="work-visual" href="images/research/barbarians.png" target="_blank" rel="noopener" aria-label="Enlarge: AI-driven systems research loop with solution generation, evaluation, and selection"><img src="images/research/barbarians.png" alt="AI-driven systems research loop with solution generation, evaluation, and selection" width="1402" height="650" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Programming languages &amp; systems</div>
   <h3><a href="https://arxiv.org/abs/2512.14806">Let the Barbarians In: How AI Can Accelerate Systems Performance Research</a></h3>
   <p class="work-venue">Preprint · 2025</p>
@@ -352,24 +344,54 @@
     <p class="authors">Sudhir Kumar Suman, Hrithwik Shalu, <span class="me">Lakshya A Agrawal</span>, Archit Agrawal, Juned Kadiwala</p>
   </details>
 </article>
-<article class="work" id="dspy" data-topics="harness training" data-selected="false" hidden>
+
+
+</div>
+  </section>
+
+
+  <section class="section projects-section" id="software" aria-labelledby="projects-heading">
+    <div class="section-heading"><h2 id="projects-heading">Open Source Projects</h2></div>
+    <div class="project-list">
+<article class="work project" id="multilspy" data-topics="systems code">
+  <a class="work-visual" href="images/projects/language-server.png" target="_blank" rel="noopener" aria-label="Enlarge: Language Server Protocol connecting developer tools to language servers"><img src="images/projects/language-server.png" alt="Language Server Protocol connecting developer tools to language servers" width="709" height="357" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
+  <div class="work-category">Programming languages &amp; systems · AI for code</div>
+  <h3><a href="https://github.com/microsoft/multilspy">multilspy</a></h3>
+  <p class="work-venue">Open-source software · Creator</p>
+  <p class="work-description">A Python library for working with language servers across programming languages. It handles server setup and communication, making static analysis, code completion, definitions, and references accessible to developer tools and coding agents.</p>
+  <div class="work-links"><a href="https://github.com/microsoft/multilspy"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code &amp; documentation</a><a href="#mgd">Related paper</a></div>
+</article>
+<article class="work project" id="dspy" data-topics="harness training">
+  <a class="work-visual" href="images/projects/dspy.png" target="_blank" rel="noopener" aria-label="Enlarge: DSPy project logo"><img src="images/projects/dspy.png" alt="DSPy project logo" width="609" height="196" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Open-source infrastructure</div>
   <h3><a href="https://dspy.ai/">DSPy</a></h3><p class="work-venue">Core maintainer</p>
   <p class="work-description">A framework for programming with language models. My contributions include the GEPA and GRPO integrations and parts of the language-model interface.</p>
   <div class="work-links"><a href="https://dspy.ai/">Documentation</a><a href="https://github.com/stanfordnlp/dspy"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a></div>
 </article>
-<article class="work" id="streamblocks" data-topics="systems" data-selected="false" hidden>
+<article class="work project" id="omni" data-topics="harness">
+  <a class="work-visual" href="images/blogs/omni.png" target="_blank" rel="noopener" aria-label="Enlarge: Evaluation of optimize_anything omni against individual optimization engines"><img src="images/blogs/omni.png" alt="Evaluation of optimize_anything omni against individual optimization engines" width="640" height="396" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
+  <div class="work-category">Harness optimization</div>
+  <h3><a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything omni</a></h3>
+  <p class="work-venue">Software &amp; blog · 2026</p>
+  <p class="work-description">A meta-optimizer that combines GEPA, AutoResearch, and Meta-Harness, exploring across engines and continuing from the most promising results.</p>
+  <div class="work-links"><a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-journal-text"></use></svg>Blog &amp; documentation</a></div>
+</article>
+<article class="work project" id="streamblocks" data-topics="systems">
+  <a class="work-visual" href="images/projects/streamblocks.png" target="_blank" rel="noopener" aria-label="Enlarge: CAL actor model showing input streams, internal state, actions, and output streams"><img src="images/projects/streamblocks.png" alt="CAL actor model showing input streams, internal state, actions, and output streams" width="880" height="291" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Programming languages &amp; systems</div>
   <h3><a href="https://github.com/streamblocks/streamblocks-graalvm">StreamBlocks GraalVM</a></h3><p class="work-venue">EPFL · 2020–2021</p>
   <p class="work-description">A runtime for the CAL dataflow language on Truffle/GraalVM, with IDE and debugger support, developed in Prof. James Larus’s group.</p>
   <div class="work-links"><a href="https://github.com/streamblocks/streamblocks-graalvm"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a><a href="https://docs.google.com/presentation/d/1vDLjNPrK1Ypjpj-AT1m_EUzubZf0ef9--r2WP_BiyOk/edit"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-easel"></use></svg>Slides</a></div>
 </article>
-<article class="work" id="pytranslate" data-topics="systems" data-selected="false" hidden>
+<article class="work project" id="pytranslate" data-topics="systems">
+  <a class="work-visual" href="images/projects/maxima.png" target="_blank" rel="noopener" aria-label="Enlarge: Maxima symbolic computations and plotting, the host system for Pytranslate"><img src="images/projects/maxima.png" alt="Maxima symbolic computations and plotting, the host system for Pytranslate" width="1600" height="691" loading="lazy" decoding="async"><span aria-hidden="true">↗</span></a>
   <div class="work-category">Programming languages &amp; systems</div>
   <h3><a href="https://maxima.sourceforge.io/docs/manual/maxima_singlepage.html#Package-pytranslate">Pytranslate</a></h3><p class="work-venue">Google Summer of Code · 2019</p>
   <p class="work-description">A Maxima-to-Python transpiler written in Common Lisp, including support for plotting. Distributed with Maxima since 2019.</p>
   <div class="work-links"><a href="https://maxima.sourceforge.io/docs/manual/maxima_singlepage.html#Package-pytranslate">Documentation</a></div>
-</article></div>
+</article>
+    </div>
+    <div class="other-contributions"><p>Other open-source contributions include <a href="https://github.com/INRIA/spoon/pulls?q=author%3ALakshyAAAgrawal">INRIA/spoon</a>, <a href="https://github.com/mozilla/bugbug/pulls?q=author%3ALakshyAAAgrawal">mozilla/bugbug</a>, and <a href="https://github.com/lucidrains/memorizing-transformers-pytorch/pulls?q=author%3ALakshyAAAgrawal">memorizing-transformers-pytorch</a>.</p></div>
   </section>
 
   <section id="talks" class="section" aria-labelledby="talks-heading">
@@ -441,8 +463,8 @@
   <section id="blogs" class="section" aria-labelledby="blogs-heading">
     <div class="section-heading"><div><h2 id="blogs-heading">Blog posts</h2></div></div>
     <div class="blog-list">
-      <article class="blog-entry"><a class="blog-visual essay-cover" href="https://x.com/rish2k1/status/2068414528598286485" aria-label="Read Why On-Policy Distillation Works and Naive Self-Distillation Doesn't"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-journal-text"></use></svg></a><div><span class="eyebrow">Research note</span><h3><a href="https://x.com/rish2k1/status/2068414528598286485">Why On-Policy Distillation Works and Naive Self-Distillation Doesn't</a></h3></div></article>
-      <article class="blog-entry"><a class="blog-visual" href="https://x.com/i/article/2066378829221036033" aria-label="Read Owning Your Token Capital"><img src="images/blogs/owning-token-capital.jpg" alt="GEPA learning loop connecting prompts, weights, skills, and evaluations" width="900" height="360" loading="lazy" decoding="async"></a><div><span class="eyebrow">Personal essay · Jun 2026</span><h3><a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a></h3><p>Building the enterprise AI learning loop.</p></div></article>
+      <article class="blog-entry"><a class="blog-visual" href="https://x.com/rish2k1/status/2068414528598286485" aria-label="Read Why On-Policy Distillation Works and Naive Self-Distillation Doesn't"><img src="images/blogs/on-policy-distillation.jpg" alt="Distillation Works—When the Teacher Is Right" width="1200" height="480" loading="lazy" decoding="async"></a><div><h3><a href="https://x.com/rish2k1/status/2068414528598286485">Why On-Policy Distillation Works and Naive Self-Distillation Doesn't</a></h3></div></article>
+      <article class="blog-entry"><a class="blog-visual" href="https://x.com/i/article/2066378829221036033" aria-label="Read Owning Your Token Capital"><img src="images/blogs/owning-token-capital.jpg" alt="GEPA learning loop connecting prompts, weights, skills, and evaluations" width="900" height="360" loading="lazy" decoding="async"></a><div><span class="eyebrow">Jun 2026</span><h3><a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a></h3><p>Building the enterprise AI learning loop.</p></div></article>
       <article class="blog-entry"><a class="blog-visual" href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/" aria-label="Read Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better"><img src="images/blogs/parallel.png" alt="" loading="lazy" decoding="async"></a><div><span class="eyebrow">Jul 2026</span><h3><a href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/">Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better</a></h3></div></article>
       <article class="blog-entry"><a class="blog-visual" href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/" aria-label="Read optimize_anything Goes omni: Composing Optimizers into Meta-Optimizer Pipelines"><img src="images/blogs/omni.png" alt="" loading="lazy" decoding="async"></a><div><span class="eyebrow">Jul 2026</span><h3><a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything Goes omni: Composing Optimizers into Meta-Optimizer Pipelines</a></h3></div></article>
       <article class="blog-entry"><a class="blog-visual" href="https://gepa-ai.github.io/gepa/blog/2026/05/11/learning-fast-and-slow/" aria-label="Read Learning, Fast and Slow: Towards LLMs That Adapt Continually"><img src="images/research/fst.png" alt="" loading="lazy" decoding="async"></a><div><span class="eyebrow">May 2026</span><h3><a href="https://gepa-ai.github.io/gepa/blog/2026/05/11/learning-fast-and-slow/">Learning, Fast and Slow: Towards LLMs That Adapt Continually</a></h3></div></article>
@@ -470,23 +492,8 @@
     </div>
   </section>
 
-  <section class="section background" id="background" aria-labelledby="background-heading">
-    <div class="section-heading"><div><span class="eyebrow">04 / Background</span><h2 id="background-heading">Background</h2></div></div>
-    <div class="background-grid">
-      <div>
-        <h3>Education &amp; experience</h3>
-        <p>Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), working with <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a>.</p>
-        <p>I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department. I did my undergraduate thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a>, and spent two summers at EPFL with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a>.</p>
-        <p>I also interned as a software development engineer at Microsoft in 2021 and participated in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> in 2019, working on the <a href="#pytranslate">Maxima-to-Python transpiler</a>.</p>
-        <div class="affiliation-logos" aria-label="Past affiliations"><img src="images/logos/iiitd.png" alt="IIIT-Delhi" loading="lazy"><img src="images/logos/microsoft.png" alt="Microsoft" loading="lazy"><img src="images/logos/epfl.png" alt="EPFL" loading="lazy"><img src="images/logos/gsoc.png" alt="Google Summer of Code" loading="lazy"></div>
-        <div class="service"><h3>Teaching &amp; service</h3>
-          <p>I was a teaching assistant for Machine Learning (CSE343/ECE563) and Theory of Computation (CSE322) at IIIT-Delhi in 2021.</p>
-          <p>I have reviewed for NeurIPS 2025, ICLR 2025, and ISEC 2024, and mentor student collaborators on the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA project</a>.</p>
-          <p>Other open-source contributions include <a href="https://github.com/INRIA/spoon/pulls?q=author%3ALakshyAAAgrawal">INRIA/spoon</a>, <a href="https://github.com/mozilla/bugbug/pulls?q=author%3ALakshyAAAgrawal">mozilla/bugbug</a>, and <a href="https://github.com/lucidrains/memorizing-transformers-pytorch/pulls?q=author%3ALakshyAAAgrawal">memorizing-transformers-pytorch</a>.</p>
-        </div>
-      </div>
-      <div>
-        <h3 id="honors">Honors &amp; awards</h3>
+  <section class="section honors-section" id="honors" aria-labelledby="honors-heading">
+    <div class="section-heading"><h2 id="honors-heading">Honors &amp; awards</h2></div>
         <ul class="recognition">
           <li><span><a href="https://www2.eecs.berkeley.edu/Students/Awards/">Eli Jury Award</a><small>UC Berkeley EECS</small></span><time>2026</time></li>
           <li><span><a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/">Amazon AI PhD Fellowship</a></span><time>2025</time></li>
@@ -500,7 +507,20 @@
           <li><span><a href="https://summer.epfl.ch/">Summer@EPFL Fellowship</a></span><time>2020, 2021</time></li>
           <li><span>Dean’s Award for Academic Excellence<small>IIIT-Delhi</small></span><time>2019, 2021</time></li>
         </ul>
+  </section>
+
+  <section class="section background" id="background" aria-labelledby="background-heading">
+    <div class="section-heading"><h2 id="background-heading">Background</h2></div>
+    <div class="background-grid">
+      <div>
+        <h3>Education &amp; experience</h3>
+        <p>Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), working with <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a>. I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department. I did my undergraduate thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a>, and spent two summers at EPFL with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a>. I also interned as a software development engineer at Microsoft in 2021 and participated in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> in 2019, working on the <a href="#pytranslate">Maxima-to-Python transpiler</a>.</p>
+        <div class="affiliation-logos" aria-label="Past affiliations"><img src="images/logos/iiitd.png" alt="IIIT-Delhi" loading="lazy"><img src="images/logos/microsoft.png" alt="Microsoft" loading="lazy"><img src="images/logos/epfl.png" alt="EPFL" loading="lazy"><img src="images/logos/gsoc.png" alt="Google Summer of Code" loading="lazy"></div>
+        <div class="service"><h3>Teaching &amp; service</h3>
+          <p>I was a teaching assistant for Machine Learning (CSE343/ECE563) and Theory of Computation (CSE322) at IIIT-Delhi in 2021. I have reviewed for NeurIPS 2025, ICLR 2025, and ISEC 2024, and mentor student collaborators on the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA project</a>.</p>
+        </div>
       </div>
+
     </div>
 
         <div class="beyond"><h3>Outside research</h3><p>I grew up in Chhattisgarh and went to boarding school in the Nilgiris, where the orchestra got me hooked on the <a href="https://www.youtube.com/@LakshyAAAgrawal">saxophone</a>. I love classical music and jazz, films, and dancing.</p></div>
@@ -520,6 +540,6 @@
   <section class="contact" aria-label="Get in touch"><h2>Let’s talk.</h2><div><p>I look forward to learning about the use cases and failure modes of AI systems, and the research questions they raise.</p><a href="mailto:lakshyaaagrawal@berkeley.edu">lakshyaaagrawal@berkeley.edu <span aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer class="container footer"><span>Last updated September 2026</span><div><a href="https://forms.gle/ZdAZDRqyPkofTVQP7">Anonymous contact &amp; feedback</a><a href="https://github.com/LakshyAAAgrawal/lakshyaaagrawal.github.io">Source ↗</a><a href="#top">Back to top ↑</a></div><div class="visitors" aria-hidden="true"><a href="https://mapmyvisitors.com/web/1bvp5" title="Visit tracker" tabindex="-1"><img src="https://mapmyvisitors.com/map.png?cl=444444&amp;w=300&amp;t=tt&amp;d=q4DhG5vMi18gxz0yEKDBcfct3ReHJOJCuG0k-8evHXs&amp;co=fbfbfb&amp;ct=444444" alt="Map of site visitors" width="300"></a></div></footer>
-<script src="js/site.js?v=20260926-5" defer></script>
+<script src="js/site.js?v=20260926-6" defer></script>
 </body>
 </html>

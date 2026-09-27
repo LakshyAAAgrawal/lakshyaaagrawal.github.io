@@ -2,6 +2,18 @@
 
 Research visuals stay attached to their project entries. Existing figures in `sides/` and personal photographs in `assets/carousel_images/` are preserved from the previous website.
 
+## Publication and software split
+
+- `blogs/on-policy-distillation.jpg`: user-supplied `HLR7rClaAAAClUQ.jpeg` from Downloads, copied unchanged for the distillation post.
+- `research/barbarians.png`: [ADRS architecture figure](https://arxiv.org/html/2512.14806v1/ADRS_evolve_v5.png) from *Let the Barbarians In*.
+- Combee and gskill publication entries reuse their respective blog figures listed below.
+- `projects/language-server.png`: [Language Server Protocol overview diagram](https://raw.githubusercontent.com/microsoft/language-server-protocol/gh-pages/_overviews/lsp/img/language-server.png), used to illustrate the protocol multilspy implements, not presented as a multilspy-specific result.
+- `projects/dspy.png`: [official DSPy logo](https://raw.githubusercontent.com/stanfordnlp/dspy/main/docs/docs/static/img/dspy_logo.png).
+- `projects/streamblocks.png`: [CAL actor diagram](https://raw.githubusercontent.com/streamblocks/streamblocks-graalvm/master/res/ActorModel.png) from the StreamBlocks GraalVM repository.
+- `projects/maxima.png`: [Maxima computation and plotting example](https://maxima.sourceforge.io/img/maxima-banner.png), used to illustrate Pytranslate's host system, not its own output.
+- optimize_anything omni reuses `blogs/omni.png`.
+- *Knowing Is Not Seeing* currently uses a typographic paper-cover thumbnail containing its title and venue, not an invented research figure. OpenReview blocked automated access to the PDF; replace this cover with a supplied figure when available.
+
 New local assets:
 
 - `research/fst.png`: [Fast-Slow Training blog](https://gepa-ai.github.io/gepa/blog/2026/05/11/learning-fast-and-slow/), `fst_diagram.png`. Resized to 1800 pixels wide for web delivery.

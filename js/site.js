@@ -26,10 +26,10 @@
 
   var controls = document.querySelector('.research-controls');
   var buttons = Array.from(controls.querySelectorAll('[data-filter]'));
-  var works = Array.from(document.querySelectorAll('.work'));
+  var works = Array.from(document.querySelectorAll('#research .work'));
   var status = document.querySelector('.research-status');
   var filter = 'selected';
-  var labels = { selected: 'Selected work', all: 'All work', harness: 'Harness optimization', training: 'Model training & RL', evaluation: 'Evaluation', code: 'AI for code', systems: 'Programming languages & systems' };
+  var labels = { selected: 'Selected publications', all: 'All publications', harness: 'Harness optimization', training: 'Model training & RL', evaluation: 'Evaluation', code: 'AI for code', systems: 'Programming languages & systems' };
 
   function setFilter(value) {
     filter = value;
@@ -42,7 +42,7 @@
     buttons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.filter === value));
     });
-    status.textContent = labels[value] + ' · ' + visible + ' of ' + works.length + ' papers & projects';
+    status.textContent = labels[value] + ' · ' + visible + ' of ' + works.length;
   }
   controls.hidden = false;
   buttons.forEach(function (button) {
@@ -120,7 +120,7 @@
   updatePlayback();
 
   // Preserve old section links and reveal a project when linking directly to it.
-  var topicAnchors = { harness: 'harness', 'post-training': 'training', evaluation: 'evaluation', ai4code: 'code', pl: 'systems', publications: 'all', software: 'all' };
+  var topicAnchors = { harness: 'harness', 'post-training': 'training', evaluation: 'evaluation', ai4code: 'code', pl: 'systems', publications: 'all' };
   function revealHash() {
     var id;
     try { id = decodeURIComponent(location.hash.slice(1)); } catch (error) { return; }
@@ -130,7 +130,7 @@
       setFilter(topicAnchors[id]);
       if (!target) target = document.getElementById('research');
     }
-    if (target && target.classList.contains('work') && target.hidden) setFilter('all');
+    if (target && works.includes(target) && target.hidden) setFilter('all');
     if (target) {
       var parent = target.parentElement;
       while (parent) {
@@ -154,6 +154,6 @@
         });
       });
     }, { rootMargin: '-15% 0px -65% 0px' });
-    ['about', 'research', 'talks', 'blogs', 'background'].forEach(function (id) { observer.observe(document.getElementById(id)); });
+    ['about', 'research', 'software', 'talks', 'blogs', 'honors', 'background'].forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
 })();
