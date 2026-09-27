@@ -15,8 +15,8 @@ const projects = articles(section('software'));
 test('publications and software are distinct, with a thumbnail per entry', () => {
   assert.equal(papers.length, 14);
   assert.equal(papers.filter(p => attr(p, 'data-selected') === 'true').length, 7);
-  assert.equal(projects.length, 5);
-  assert.deepEqual(projects.map(p => attr(p, 'id')), ['multilspy', 'dspy', 'omni', 'streamblocks', 'pytranslate']);
+  assert.equal(projects.length, 6);
+  assert.deepEqual(projects.map(p => attr(p, 'id')), ['gepa-software', 'multilspy', 'dspy', 'omni', 'streamblocks', 'pytranslate']);
   for (const entry of [...papers, ...projects]) assert.match(entry, /class="work-visual(?: |")/);
   for (const entry of projects) assert.ok(!/\bhidden\b|data-selected=/.test(entry.split('>')[0]));
   assert.match(html, /Selected publications · 7 of 14/);
@@ -25,7 +25,7 @@ test('publications and software are distinct, with a thumbnail per entry', () =>
 test('honors is separate and background paragraphs are compact', () => {
   assert.equal((section('honors').match(/<li>/g) || []).length, 9);
   assert.ok(!section('background').includes('recognition'));
-  const education = section('background').split('Education &amp; experience</h3>')[1].split('<div class="affiliation-logos"')[0];
+  const education = section('background').split('Education &amp; experience</h3>')[1].split('<div class="service"')[0];
   assert.equal((education.match(/<p>/g) || []).length, 1);
   assert.match(section('software'), /Other open-source contributions include/);
   assert.equal((html.match(/Other open-source contributions include/g) || []).length, 1);
@@ -36,6 +36,21 @@ test('blog labels are removed and the supplied thumbnail is used', () => {
   assert.ok(!html.includes('Personal essay ·'));
   assert.equal((html.match(/class="blog-entry"/g) || []).length, 8);
   assert.match(html, /src="images\/blogs\/on-policy-distillation.jpg"/);
+});
+
+test('publication metadata, blog date, and affiliations match the corrections', () => {
+  const gskill = papers.find(p => attr(p, 'id') === 'gskill');
+  assert.ok(gskill.includes('https://dl.acm.org/doi/10.1145/3786335.3813196'));
+  assert.ok(gskill.includes('ACM CAIS 2026 · Demo paper'));
+  assert.ok(papers.find(p => attr(p, 'id') === 'knowing-is-not-seeing').includes('ICLR 2026 · ICBINB Workshop'));
+  assert.ok(section('blogs').includes('<time datetime="2026-06-20">Jun 20, 2026</time>'));
+  assert.ok(section('blogs').includes('News Coverage</h3>'));
+  assert.ok(!section('background').includes('affiliation-logos'));
+  assert.equal((section('affiliations').match(/<li>/g) || []).length, 11);
+  assert.ok(html.indexOf('id="affiliations"') > html.indexOf('class="contact"'));
+  assert.ok(section('background').includes('https://www.thelawrenceschool.org/'));
+  assert.ok(section('background').includes('stylophone, Indian flute, and snare drums'));
+  assert.ok(!section('background').includes('orchestra got me hooked'));
 });
 
 test('IDs, local anchors, assets, and cache versions remain valid', () => {
@@ -85,7 +100,7 @@ test('publication filters and direct links do not hide software projects', () =>
   assert.deepEqual(works.filter(w => !w.hidden).map(w => w.id), ['barbarians', 'sparql']);
   context.setFilter('selected');
   vm.runInContext(script.slice(script.indexOf('  var topicAnchors ='), script.indexOf("  window.addEventListener('hashchange'")), context);
-  for (const id of ['multilspy', 'dspy', 'software', 'honors']) {
+  for (const id of ['gepa-software', 'multilspy', 'dspy', 'software', 'honors']) {
     context.location.hash = '#' + id;
     context.revealHash();
     assert.equal(works.filter(w => !w.hidden).length, 7);

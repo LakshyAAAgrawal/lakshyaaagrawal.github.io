@@ -35,7 +35,16 @@ YouTube thumbnails are served locally and link to their respective videos; no vi
 
 ## Link icons and affiliations
 
-Inline SVG icons in `index.html` are from [Bootstrap Icons](https://github.com/twbs/icons), under the MIT license preserved in `images/BOOTSTRAP-ICONS-LICENSE.txt`. They supplement visible labels rather than replacing them. Institution logos in `images/logos/` are reused from the deployed `master` website.
+Inline SVG icons in `index.html` are from [Bootstrap Icons](https://github.com/twbs/icons), under the MIT license preserved in `images/BOOTSTRAP-ICONS-LICENSE.txt`. They supplement visible labels rather than replacing them. IIIT-Delhi, Microsoft, EPFL, and GSoC logos in `images/logos/` are reused from the deployed `master` website, as is `images/berkeley_sky.png`.
+
+Additional affiliation marks are sourced from the institutions themselves:
+
+- `logos/berkeley.svg`: [UC Berkeley wordmark](https://www.berkeley.edu/wp-content/themes/berkeleygateway/img/logo-berkeley.svg?v=3).
+- `logos/bair.png`: [BAIR logo](https://bair.berkeley.edu/blog/assets/BAIR_Logo.png).
+- `logos/berkeley-nlp.png`: [Berkeley NLP logo](https://nlp.cs.berkeley.edu/logo.png).
+- `logos/laude.svg`: [Laude mark](https://www.laude.org/images/logo/swirl-2-rings-black.svg).
+- `logos/aws.png`: [AWS logo](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png), used for the explicitly labeled fellowship affiliation.
+- `logos/incf.png`: [INCF logo](https://www.incf.org/sites/default/files/incf_logo_grey.png), labeled INCF / Maxima for the GSoC affiliation.
 
 ## Blog thumbnails
 
