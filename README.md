@@ -25,7 +25,10 @@ The site is a single hand-written static page with no build step or framework.
 - Topic values are `harness`, `training`, `evaluation`, `code`, and `systems`; an entry may have more than one, separated by spaces. Keep the initial selection focused. All 19 entries remain readable without JavaScript.
 - Keep each project's summary, publication metadata, author list, code, and related links together. Full authorship is available in the entry's native disclosure. Do not add a second publications or software list for the same work.
 - Talks have their own section; only presentations by Lakshya belong there. Historical announcements live in the expandable news archive.
-- Update the total in the “Explore all” button when adding a project. Filter counts are calculated automatically.
+- Filter counts are calculated automatically. The All work filter reveals the complete collection.
+- Keep a single news list in the bottom archive. JavaScript moves it into the top Updates disclosure while that disclosure is open, then returns it below when closed.
+- Talks and background are fully open. Label private invitations explicitly, and distinguish recordings, slides, and event pages. Link video segments to their start time and show the time range.
+- All five original photos live in a separate, manually scrollable gallery with captions and links to full-size images. Do not autoplay it.
 - Update the "Last updated" line in the footer and `lastmod` in `sitemap.xml` when publishing.
 - To preview locally: `python3 -m http.server 8000` in the repository root, then open <http://localhost:8000/>.
 - For a preview listening on local network interfaces, use `python3 -m http.server 8000 --bind 0.0.0.0`. Network/firewall settings still determine access from another device.

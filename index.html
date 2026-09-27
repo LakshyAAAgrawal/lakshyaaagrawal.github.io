@@ -95,14 +95,8 @@
 <main id="top" class="container">
   <section class="intro" id="about" aria-labelledby="name">
     <div class="identity">
+      <div class="profile-sidebar">
       <img class="portrait" src="images/profile-640.jpg" srcset="images/profile-640.jpg 640w, images/profile-1024.jpg 1024w" sizes="(max-width: 700px) 270px, 248px" width="1024" height="1024" alt="Lakshya A Agrawal" fetchpriority="high">
-      <h1 id="name">Lakshya A Agrawal</h1>
-    </div>
-    <div class="intro-copy">
-      <p>I am a Computer Science PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am fortunate to be advised by <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>. I am affiliated with <a href="https://sky.cs.berkeley.edu/">Sky Lab</a>, <a href="https://bair.berkeley.edu/">BAIR</a>, and <a href="https://nlp.cs.berkeley.edu/">Berkeley NLP</a>.</p>
-      <p>I am also very grateful for the opportunity to work with <a href="https://people.eecs.berkeley.edu/~jegonzal/">Prof. Joseph Gonzalez</a>, <a href="https://people.eecs.berkeley.edu/~istoica/">Prof. Ion Stoica</a>, <a href="https://scholar.google.com/citations?user=JSFmVQEAAAAJ&amp;hl=en">Prof. Alex Dimakis</a>, and <a href="https://omarkhattab.com/">Prof. Omar Khattab</a>, each of whom has shaped how I approach research.</p>
-      <p>I build AI systems that improve through experience, by optimizing their prompts, agent harnesses, and model weights. My research spans reflective optimization, reinforcement learning, and continual learning, alongside work on the reliability of generated code.</p>
-      <p>My background in programming languages shapes how I approach AI: studying how models, tools, and learning algorithms work together as a system. I am passionate about open source and turning research into useful software.</p>
       <p class="fellowships"><a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/">Amazon AI PhD Fellow</a> <span aria-hidden="true">·</span> <a href="https://www.laude.org/">Laude Open Research Resident</a></p>
       <div class="profile-links" aria-label="Contact and profiles">
         <a href="mailto:lakshyaaagrawal@berkeley.edu">Email <span aria-hidden="true">↗</span></a>
@@ -112,50 +106,25 @@
         <a href="https://x.com/LakshyAAAgrawal">X <span aria-hidden="true">↗</span></a>
         <a href="https://www.linkedin.com/in/lakshyaaagrawal/">LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
+      </div>
+      <h1 id="name">Lakshya A Agrawal</h1>
+    </div>
+    <div class="intro-copy">
+      <p>I am a Computer Science PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am fortunate to be advised by <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>. I am affiliated with <a href="https://sky.cs.berkeley.edu/">Sky Lab</a>, <a href="https://bair.berkeley.edu/">BAIR</a>, and <a href="https://nlp.cs.berkeley.edu/">Berkeley NLP</a>.</p>
+      <p>I am also very grateful for the opportunity to work with <a href="https://people.eecs.berkeley.edu/~jegonzal/">Prof. Joseph Gonzalez</a>, <a href="https://people.eecs.berkeley.edu/~istoica/">Prof. Ion Stoica</a>, <a href="https://scholar.google.com/citations?user=JSFmVQEAAAAJ&amp;hl=en">Prof. Alex Dimakis</a>, and <a href="https://omarkhattab.com/">Prof. Omar Khattab</a>, each of whom has shaped how I approach research.</p>
+      <p>I build AI systems that improve through experience, by optimizing their prompts, agent harnesses, and model weights. My research spans reflective optimization, reinforcement learning, and continual learning, alongside work on the reliability of generated code.</p>
+      <p>My background in programming languages shapes how I approach AI: studying how models, tools, and learning algorithms work together as a system. I am passionate about open source and turning research into useful software.</p>
+
     </div>
   </section>
 
   <details class="updates" id="news">
     <summary><span class="eyebrow">Updates</span><span class="update-preview">Recent talks, releases, and milestones</span><span class="expand-label">View archive <span aria-hidden="true">+</span></span></summary>
-    <ul class="news-list">
-          <li><time datetime="2026-08">Aug 2026</time><div class="item">Invited talk at Etsy's <b>AI Stitch</b> series: <i>From Prompts to Programs: Text Optimization with GEPA and DSPy</i>.</div></li>
-          <li><time datetime="2026-08">Aug 2026</time><div class="item">Released <a href="https://x.com/BhavyaChopra1/status/2089780200968163436">observability and steerability tools</a> for GEPA and optimize_anything, re-architecting GEPA around HCI principles so that people and agents alike can inspect and steer an optimization run.</div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="item">New GEPA blog post on <a href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/">parallel proposals</a>, which make optimization 3–4× faster.</div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="item">Released <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything omni</a>, a meta-optimizer that composes GEPA, AutoResearch, and Meta-Harness and beats every standalone optimizer under a matched budget.</div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="item"><a href="https://arxiv.org/abs/2512.04123">Measuring Agents in Production</a>, appearing as <i>Characterizing Agents in Production</i>, presented as an <b>Oral at ICML 2026</b> in Seoul.</div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="item"><a href="https://arxiv.org/abs/2604.04247">Combee</a> accepted to COLM 2026.</div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="item">Main-stage talk, <i>Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization</i>, at the <a href="https://www.ai.engineer/worldsfair/schedule?q=Lakshya+Agrawal&amp;session=asn_slot_2026_07_01_main_stage_0900_2026_06_03t09_49_39_605z">AI Engineer World's Fair</a> in San Francisco.</div></li>
-          <li><time datetime="2026-06">Jun 2026</time><div class="item">Invited talk at Netflix Research on GEPA, optimize_anything, and Fast-Slow Training.</div></li>
-          <li><time datetime="2026-06">Jun 2026</time><div class="item">Wrote <a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a>, an essay on building the enterprise AI learning loop, in response to Satya Nadella's article on enterprise AI.</div></li>
-          <li><time datetime="2026-06">Jun 2026</time><div class="item">Microsoft AI's <a href="https://x.com/mustafasuleyman/status/2061880164498428188">MAI-Thinking-1</a> used GEPA-optimized LLM judges to filter its pre-training data.</div></li>
-          <li><time datetime="2026-05">May 2026</time><div class="item"><a href="https://arxiv.org/abs/2605.19633">optimize_anything</a> and <a href="https://arxiv.org/abs/2508.04660">Multi-module GRPO</a> both receive <b>Industry Spotlight Awards</b> at the inaugural <a href="https://www.caisconf.org/">ACM CAIS 2026</a> (<a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">talk</a>).</div></li>
-          <li><time datetime="2026-05">May 2026</time><div class="item">Released <a href="https://arxiv.org/abs/2605.12484">Learning, Fast and Slow</a>, introducing Fast-Slow Training for continual learning in LLMs.</div></li>
-          <li><time datetime="2026-05">May 2026</time><div class="item">Invited talk on GEPA and text optimization in <a href="https://dsc.ucsd.edu/~arunkk/">Prof. Arun Kumar</a>'s CSE/DSC 234 at UC San Diego on May 11 (<a href="https://www.youtube.com/watch?v=vJ6F2duUC_0">recording</a>).</div></li>
-            <li><time datetime="2026-04">Apr 2026</time><div class="item">Presented GEPA as an <b>Oral at ICLR 2026</b> in Rio de Janeiro (<a href="https://www.youtube.com/watch?v=HbGah-uP1fI">recording</a>).</div></li>
-            <li><time datetime="2026-03">Mar 2026</time><div class="item">Nous Research <a href="https://github.com/NousResearch/hermes-agent-self-evolution/blob/main/reports/phase1_validation_report.pdf">reports</a> using GEPA and DSPy for agent self-evolution and skill optimization, with a 39.5% gain.</div></li>
-            <li><time datetime="2026-02">Feb 2026</time><div class="item">Released <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">optimize_anything</a>, a universal API for optimizing any text parameter, and <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/automatically-learning-skills-for-coding-agents/">gskill</a>, which learns skills for coding agents automatically. Launched the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA blog</a>.</div></li>
-            <li><time datetime="2026-01">Jan 2026</time><div class="item"><b>GEPA accepted to ICLR 2026 as an Oral</b> (top ~2% of submissions).</div></li>
-            <li><time datetime="2025-12">Dec 2025</time><div class="item"><a href="https://arxiv.org/abs/2503.13657">Why Do Multi-Agent LLM Systems Fail?</a> presented as a <b>Spotlight</b> in the NeurIPS 2025 Datasets &amp; Benchmarks track.</div></li>
-            <li><time datetime="2025-12">Dec 2025</time><div class="item">Presented GEPA at the <a href="https://neurips.cc/virtual/2025/workshop/109559">Foundations of Reasoning in Language Models</a> workshop at NeurIPS 2025.</div></li>
-            <li><time datetime="2025-12">Dec 2025</time><div class="item">Interviewed on the <a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ">Delta Podcast</a>.</div></li>
-            <li><time datetime="2025-11">Nov 2025</time><div class="item">GEPA featured in the <a href="https://cookbook.openai.com/examples/partners/self_evolving_agents/autonomous_agent_retraining">OpenAI Cookbook</a> tutorial <i>Self-Evolving Agents</i>, written with Bain &amp; Company.</div></li>
-            <li><time datetime="2025-11">Fall 2025</time><div class="item">Named an <a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/">Amazon AI PhD Fellow</a>.</div></li>
-            <li><time datetime="2025-11">Fall 2025</time><div class="item">Recognized as a <b>Top Reviewer</b> at NeurIPS 2025.</div></li>
-            <li><time datetime="2025-10">Oct 2025</time><div class="item">Joined the <a href="https://www.laude.org/">Laude Institute</a> as an Open Research Resident. GEPA receives a <a href="https://slingshots.laude.org/">Laude Slingshot</a>.</div></li>
-            <li><time datetime="2025-09">Sep 2025</time><div class="item">Databricks reports that <a href="https://www.databricks.com/blog/building-state-art-enterprise-agents-90x-cheaper-automated-prompt-optimization">open models optimized with GEPA beat Claude Opus 4.1 at ~90× lower cost</a>.</div></li>
-            <li><time datetime="2025-08">Aug 2025</time><div class="item"><a href="https://aclanthology.org/2025.findings-emnlp.1172/">LangProBe</a> accepted to EMNLP 2025 Findings.</div></li>
-            <li><time datetime="2025-08">Aug 2025</time><div class="item">GEPA featured in <a href="https://venturebeat.com/ai/gepa-optimizes-llms-without-costly-reinforcement-learning">VentureBeat</a> and DeepLearning.AI's <i>The Batch</i>. Joined the <a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Weaviate Podcast</a> (#127) to discuss it.</div></li>
-            <li><time datetime="2025-07">Jul 2025</time><div class="item">Released the <a href="https://arxiv.org/abs/2507.19457">GEPA paper</a> and <a href="https://github.com/gepa-ai/gepa">open-source package</a>: reflective prompt evolution outperforms GRPO with up to 35× fewer rollouts.</div></li>
-            <li><time datetime="2025-05">May 2025</time><div class="item">Released <a href="https://x.com/lateinteraction/status/1919428454761553994">dspy.GRPO</a>, the first open-source GRPO pipeline for multi-module LLM programs, with Noah Ziems, Dilara Soylu, and Omar Khattab.</div></li>
-            <li><time datetime="2025-01">Jan 2025</time><div class="item">Invited talk at AMD's <i>What's New in Labs</i> series on AI-driven code performance optimization for new accelerators.</div></li>
-            <li><time datetime="2024-08">Aug 2024</time><div class="item">Started my PhD at UC Berkeley.</div></li>
-            <li><time datetime="2023-12">Dec 2023</time><div class="item">Presented <a href="https://neurips.cc/virtual/2023/poster/70362">Monitor-Guided Decoding</a> at NeurIPS 2023 in New Orleans.</div></li>
-            <li><time datetime="2023">2023</time><div class="item">Won <a href="https://www.credly.com/badges/6d4c10c9-79f8-409c-aa2a-83c3871c56b3">first place at the Microsoft Global Hackathon</a> on AI tools for developer productivity.</div></li>
-          </ul>
+    <p class="news-fallback">The full <a href="#updates-archive">updates archive</a> is below.</p>
   </details>
 
   <section class="research-section" id="research" aria-labelledby="research-heading">
-    <div class="section-heading"><div><span class="eyebrow">01 / Research</span><h2 id="research-heading">Papers &amp; projects</h2></div><p>From language-model systems<br>to systems that learn.</p></div>
+    <div class="section-heading"><div><span class="eyebrow">01 / Research</span><h2 id="research-heading">Papers &amp; projects</h2></div></div>
     <span class="anchor-alias" id="publications"></span><span class="anchor-alias" id="software"></span><span class="anchor-alias" id="harness"></span><span class="anchor-alias" id="post-training"></span><span class="anchor-alias" id="evaluation"></span><span class="anchor-alias" id="ai4code"></span><span class="anchor-alias" id="pl"></span>
     <div class="research-controls" hidden>
       <div class="view-switch" role="group" aria-label="Research selection"><button type="button" data-filter="selected" aria-pressed="true">Selected</button><button type="button" data-filter="all" aria-pressed="false">All work</button></div>
@@ -350,57 +319,78 @@
   <p class="work-description">A Maxima-to-Python transpiler written in Common Lisp, including support for plotting. Distributed with Maxima since 2019.</p>
   <div class="work-links"><a href="https://maxima.sourceforge.io/docs/manual/maxima_singlepage.html#Package-pytranslate">Documentation</a></div>
 </article></div>
-    <div class="research-end"><button class="text-button show-all" type="button" hidden>Explore all 19 papers &amp; projects <span aria-hidden="true">↗</span></button><a href="#talks">Continue to talks <span aria-hidden="true">↓</span></a></div>
   </section>
 
   <section id="talks" class="section" aria-labelledby="talks-heading">
-    <div class="section-heading"><div><span class="eyebrow">02 / In conversation</span><h2 id="talks-heading">Talks &amp; writing</h2></div></div>
+    <div class="section-heading"><div><span class="eyebrow">02 / Sharing research</span><h2 id="talks-heading">Talks &amp; writing</h2></div></div>
     <div class="talks-grid">
-      <div class="featured-talk">
-        <a class="talk-cover" href="https://www.youtube.com/watch?v=OA-Mc60Rboo" aria-label="Watch my AI Engineer World's Fair talk"><img src="images/talks/ai-engineer.jpg" alt="Lakshya presenting GEPA at AI Engineer World’s Fair" width="1280" height="720" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
-        <div class="eyebrow">AI Engineer World’s Fair · July 2026</div>
-        <h3><a href="https://www.youtube.com/watch?v=OA-Mc60Rboo">Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization</a></h3>
-        <p>My main-stage talk connecting reflective optimization with LLM post-training and continual learning.</p>
-        <a class="watch-link" href="https://www.youtube.com/watch?v=OA-Mc60Rboo"><span aria-hidden="true">▶</span> Watch the talk <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="writing-list">
-        <article><span class="eyebrow">Essay · June 2026</span><h3><a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a></h3><p>Building the enterprise AI learning loop.</p></article>
-        <article class="podcast"><a class="podcast-cover" href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s" aria-label="Watch Delta Podcast interview with Lakshya A Agrawal"><img src="images/talks/delta.jpg" alt="Delta Podcast interview with Lakshya A Agrawal" width="1280" height="720" loading="lazy" decoding="async"></a><span class="eyebrow">Podcast · December 2025</span><h3><a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s">From programming languages to self-improving AI</a></h3><p>Delta Podcast, episode 52. My path from undergraduate PL research to AI for code at Microsoft Research, then to self-improving AI systems at Berkeley.</p></article>
-        <article class="podcast"><a class="podcast-cover" href="https://www.youtube.com/watch?v=fREQrxhBSk0" aria-label="Watch Weaviate Podcast conversation about GEPA"><img src="images/talks/weaviate.jpg" alt="Weaviate Podcast conversation about GEPA" width="1280" height="720" loading="lazy" decoding="async"></a><span class="eyebrow">Podcast · August 2025</span><h3><a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Reflective optimization &amp; language programs</a></h3><p>Weaviate Podcast, episode 127. <a href="https://open.spotify.com/episode/2tE6X60bfjg9FNOz9JXrOh">Listen on Spotify ↗</a></p></article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=OA-Mc60Rboo" aria-label="Watch talk: Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization"><img src="images/talks/ai-engineer.jpg" alt="Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization video thumbnail" width="1280" height="720" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">AI Engineer World’s Fair · Jul 2026</span><h3><a href="https://www.youtube.com/watch?v=OA-Mc60Rboo">Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization</a></h3><p>Reflective optimization, LLM post-training, and continual learning.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=OA-Mc60Rboo">Watch talk</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=XWOwqN2BpjM" aria-label="Watch talk: optimize_anything"><img src="images/talks/cais.jpg" alt="optimize_anything video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">ACM CAIS · May 2026</span><h3><a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">optimize_anything</a></h3><p>With Donghyun (Luke) Lee. Industry Spotlight Award.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">Watch talk</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=vJ6F2duUC_0&amp;t=33s" aria-label="Watch lecture: GEPA and Text Optimization"><img src="images/talks/ucsd.jpg" alt="GEPA and Text Optimization video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">UC San Diego · May 2026</span><h3><a href="https://www.youtube.com/watch?v=vJ6F2duUC_0&amp;t=33s">GEPA and Text Optimization</a></h3><p>Guest lecture for Prof. Arun Kumar’s CSE/DSC 234.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=vJ6F2duUC_0&amp;t=33s">Watch lecture</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=HbGah-uP1fI" aria-label="Watch oral talk: GEPA: Reflective Prompt Evolution"><img src="images/talks/iclr.jpg" alt="GEPA: Reflective Prompt Evolution video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">ICLR · Apr 2026</span><h3><a href="https://www.youtube.com/watch?v=HbGah-uP1fI">GEPA: Reflective Prompt Evolution</a></h3><p>Oral presentation in Rio de Janeiro.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=HbGah-uP1fI">Watch oral talk</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=mmpW36WdFbI&amp;t=2707s" aria-label="Watch: A chat with Andy Konwinski"><img src="images/talks/laude-podcast.jpg" alt="A chat with Andy Konwinski video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">Laude · Short podcast</span><h3><a href="https://www.youtube.com/watch?v=mmpW36WdFbI&amp;t=2707s">A chat with Andy Konwinski</a></h3><p>A short conversation with Andy at Laude.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=mmpW36WdFbI&amp;t=2707s">Watch · 45:07–48:36</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=rePCdzfITKc&amp;t=1131" aria-label="Watch: Presenting GEPA at Open Frontier"><img src="images/talks/laude-frontier.jpg" alt="Presenting GEPA at Open Frontier video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">Laude Open Frontier · Dec 2025</span><h3><a href="https://www.youtube.com/watch?v=rePCdzfITKc&amp;t=1131">Presenting GEPA at Open Frontier</a></h3><p>GEPA at Laude’s Open Frontier event.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=rePCdzfITKc&amp;t=1131">Watch · 18:51–36:31</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s" aria-label="Watch podcast: From programming languages to self-improving AI"><img src="images/talks/delta.jpg" alt="From programming languages to self-improving AI video thumbnail" width="1280" height="720" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">Delta Podcast · Dec 2025</span><h3><a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s">From programming languages to self-improving AI</a></h3><p>Episode 52. Undergraduate PL research, AI for code at Microsoft Research, and self-improving AI at Berkeley.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ&amp;t=51s">Watch podcast</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://www.youtube.com/watch?v=fREQrxhBSk0" aria-label="Watch podcast: Reflective optimization &amp; language programs"><img src="images/talks/weaviate.jpg" alt="Reflective optimization &amp; language programs video thumbnail" width="1280" height="720" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
+        <div class="talk-copy"><span class="eyebrow">Weaviate Podcast · Aug 2025</span><h3><a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Reflective optimization &amp; language programs</a></h3><p>Episode 127, on GEPA and language programs.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Watch podcast</a> <a href="https://open.spotify.com/episode/2tE6X60bfjg9FNOz9JXrOh">Listen</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="essay-cover" href="https://x.com/i/article/2066378829221036033" aria-label="Read Owning Your Token Capital"><span aria-hidden="true">Experience<br>↓<br>Learning<br>↓<br>Better systems</span></a>
+        <div class="talk-copy"><span class="eyebrow">Essay · Jun 2026</span><h3><a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a></h3><p>Building the enterprise AI learning loop.</p><a class="talk-links" href="https://x.com/i/article/2066378829221036033">Read essay</a></div>
+      </article>
+    </div>
+    <div class="other-talks">
+      <h3>Other talks &amp; coverage</h3>
+      <p class="talks-note">Recordings are linked above. Below, slides and event pages are linked where available; private talks are marked separately.</p>
+      <div class="talk-list">
+        <article><time>Aug 2026</time><div><h4>From Prompts to Programs: Text Optimization with GEPA and DSPy</h4><p>Etsy, AI Stitch series <span class="talk-access">Private invited talk</span></p></div></article>
+        <article><time>Jun 2026</time><div><h4>GEPA, optimize_anything, and Fast-Slow Training</h4><p>Netflix Research <span class="talk-access">Private invited talk</span></p></div></article>
+        <article><time>Dec 2025</time><div><h4>GEPA</h4><p>NeurIPS Foundations of Reasoning in Language Models workshop <span class="talk-access"><a href="https://neurips.cc/virtual/2025/workshop/109559">Event page</a> · No recording linked</span></p></div></article>
+        <article><time>Aug 2025</time><div><h4><a href="https://venturebeat.com/ai/gepa-optimizes-llms-without-costly-reinforcement-learning">GEPA optimizes LLMs without costly reinforcement learning</a></h4><p>VentureBeat coverage; also featured in DeepLearning.AI’s <i>The Batch</i><span class="talk-access">Article</span></p></div></article>
+        <article><time>Jan 2025</time><div><h4>AI-Driven Code Performance Optimization for New Accelerators</h4><p>AMD, What’s New in Labs <span class="talk-access"><a href="https://docs.google.com/presentation/d/1VrbYla-2gpPtSq3ZFKEtNCkD9oqt-r4X6QNP1pCKvtU/edit?usp=sharing">Slides</a></span></p></div></article>
+        <article><time>Jul–Aug 2023</time><div><h4>Guiding Language Models of Code with Global Context using Monitors</h4><p>Microsoft Research RiSE, Microsoft Research India, and Microsoft Developer Division <span class="talk-access"><a href="https://neurips.cc/media/neurips-2023/Slides/70362.pdf">Slides</a></span></p></div></article>
+        <article><time>Sep 2021</time><div><h4><a href="https://docs.google.com/presentation/d/1vDLjNPrK1Ypjpj-AT1m_EUzubZf0ef9--r2WP_BiyOk/edit">CAL Implementation in GraalVM</a></h4><p>VLSC and Data Center Systems Labs, EPFL <span class="talk-access"><a href="https://docs.google.com/presentation/d/1vDLjNPrK1Ypjpj-AT1m_EUzubZf0ef9--r2WP_BiyOk/edit">Slides</a></span></p></div></article>
       </div>
     </div>
-    <details class="archive"><summary>More talks &amp; appearances <span aria-hidden="true">+</span></summary>
-      <div class="talk-list">
-        <article><time>Aug 2026</time><div><h3>From Prompts to Programs: Text Optimization with GEPA and DSPy</h3><p>Etsy, AI Stitch invited talk series</p></div></article>
-        <article><time>Jun 2026</time><div><h3>GEPA, optimize_anything, and Fast-Slow Training</h3><p>Invited talk, Netflix Research</p></div></article>
-        <article><time>May 2026</time><div><h3><a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">optimize_anything</a></h3><p>ACM CAIS, with Donghyun (Luke) Lee</p></div></article>
-        <article><time>11 May 2026</time><div><h3><a href="https://www.youtube.com/watch?v=vJ6F2duUC_0&amp;t=33s">GEPA and Text Optimization</a></h3><p>Guest lecture, Prof. Arun Kumar’s CSE/DSC 234, UC San Diego</p></div></article>
-        <article><time>Apr 2026</time><div><h3><a href="https://www.youtube.com/watch?v=HbGah-uP1fI">GEPA</a></h3><p>ICLR oral presentation, Rio de Janeiro</p></div></article>
-        <article><time>Dec 2025</time><div><h3>GEPA</h3><p><a href="https://neurips.cc/virtual/2025/workshop/109559">Foundations of Reasoning in Language Models</a>, NeurIPS workshop</p></div></article>
-        <article><time>Aug 2025</time><div><h3><a href="https://venturebeat.com/ai/gepa-optimizes-llms-without-costly-reinforcement-learning">GEPA optimizes LLMs without costly reinforcement learning</a></h3><p>VentureBeat coverage; also featured in DeepLearning.AI’s <i>The Batch</i></p></div></article>
-        <article><time>Jan 2025</time><div><h3><a href="https://docs.google.com/presentation/d/1VrbYla-2gpPtSq3ZFKEtNCkD9oqt-r4X6QNP1pCKvtU/edit?usp=sharing">AI-Driven Code Performance Optimization for New Accelerators</a></h3><p>AMD, What’s New in Labs</p></div></article>
-        <article><time>Jul–Aug 2023</time><div><h3><a href="https://neurips.cc/media/neurips-2023/Slides/70362.pdf">Guiding Language Models of Code with Global Context using Monitors</a></h3><p>Microsoft Research RiSE, Microsoft Research India, and Microsoft Developer Division</p></div></article>
-        <article><time>Sep 2021</time><div><h3><a href="#streamblocks">CAL Implementation in GraalVM</a></h3><p>VLSC and Data Center Systems Labs, EPFL</p></div></article>
-      </div>
-    </details>
   </section>
 
   <section class="section background" id="background" aria-labelledby="background-heading">
-    <div class="section-heading"><div><span class="eyebrow">03 / A little more</span><h2 id="background-heading">Background &amp; beyond</h2></div></div>
+    <div class="section-heading"><div><span class="eyebrow">03 / Background</span><h2 id="background-heading">Background</h2></div></div>
     <div class="background-grid">
       <div>
-        <h3 class="small-heading">Previously</h3>
+        <h3>Education &amp; experience</h3>
         <p>Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), working with <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a>.</p>
         <p>I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department. I did my undergraduate thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a>, and spent two summers at EPFL with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a>.</p>
-        <figure class="research-photo"><a href="assets/carousel_images/neurips_poster_1.png" target="_blank" rel="noopener" aria-label="Enlarge NeurIPS poster-session photo"><img src="assets/carousel_images/neurips_poster_1.png" alt="Lakshya with his Monitor-Guided Decoding poster at NeurIPS" width="1280" height="576" loading="lazy" decoding="async"></a><figcaption>Presenting Monitor-Guided Decoding at NeurIPS 2023.</figcaption></figure>
-        <details class="archive"><summary>Teaching, service &amp; contributions <span aria-hidden="true">+</span></summary>
+        <div class="service"><h3>Teaching &amp; service</h3>
           <p>I was a teaching assistant for Machine Learning (CSE343/ECE563) and Theory of Computation (CSE322) at IIIT-Delhi in 2021.</p>
           <p>I have reviewed for NeurIPS 2025, ICLR 2025, and ISEC 2024, and mentor student collaborators on the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA project</a>.</p>
           <p>Other open-source contributions include <a href="https://github.com/INRIA/spoon/pulls?q=author%3ALakshyAAAgrawal">INRIA/spoon</a>, <a href="https://github.com/mozilla/bugbug/pulls?q=author%3ALakshyAAAgrawal">mozilla/bugbug</a>, and <a href="https://github.com/lucidrains/memorizing-transformers-pytorch/pulls?q=author%3ALakshyAAAgrawal">memorizing-transformers-pytorch</a>.</p>
-        </details>
+        </div>
       </div>
       <div>
-        <h3 class="small-heading" id="honors">Selected recognition</h3>
+        <h3 id="honors">Honors &amp; awards</h3>
         <ul class="recognition">
           <li><span><a href="https://www2.eecs.berkeley.edu/Students/Awards/">Eli Jury Award</a><small>UC Berkeley EECS</small></span><time>2026</time></li>
           <li><span><a href="https://slingshots.laude.org/">Laude Slingshot</a><small>For GEPA</small></span><time>2025</time></li>
@@ -408,10 +398,60 @@
           <li><span><a href="https://www.credly.com/badges/6d4c10c9-79f8-409c-aa2a-83c3871c56b3">Microsoft Global Hackathon</a><small>First place, AI tools for developer productivity</small></span><time>2023</time></li>
           <li><span>All-Round Performance Medal<small>IIIT-Delhi</small></span><time>2022</time></li>
         </ul>
-        <details class="earlier-honors"><summary>Earlier honors</summary><p>Summer@EPFL Fellowship, 2020 and 2021. Dean’s Award for Academic Excellence, IIIT-Delhi, 2019 and 2021.</p></details>
-        <div class="beyond"><h3 class="small-heading">Away from the keyboard</h3><p>I grew up in Chhattisgarh and went to boarding school in the Nilgiris, where the orchestra got me hooked on the <a href="https://www.youtube.com/@LakshyAAAgrawal">saxophone</a>. I love classical music and jazz, films, and dancing. Sanskrit NLP is close to my heart.</p></div>
+        <ul class="recognition earlier-recognition">
+          <li><span>Summer@EPFL Fellowship</span><time>2020, 2021</time></li>
+          <li><span>Dean’s Award for Academic Excellence<small>IIIT-Delhi</small></span><time>2019, 2021</time></li>
+        </ul>
       </div>
     </div>
+
+        <div class="beyond"><h3>Outside research</h3><p>I grew up in Chhattisgarh and went to boarding school in the Nilgiris, where the orchestra got me hooked on the <a href="https://www.youtube.com/@LakshyAAAgrawal">saxophone</a>. I love classical music and jazz, films, and dancing. Sanskrit NLP is close to my heart.</p></div>
+    <div class="photo-heading"><h3>A few moments along the way</h3><div class="gallery-controls" hidden><button type="button" data-gallery-step="-1" aria-label="Previous photos">←</button><button type="button" data-gallery-step="1" aria-label="Next photos">→</button></div></div>
+    <div class="photo-gallery" aria-label="Photo gallery" tabindex="0">
+      <figure><a href="assets/carousel_images/neurips_poster_1.png" target="_blank" rel="noopener" aria-label="Enlarge: Presenting MGD at NeurIPS 2023"><img src="assets/carousel_images/neurips_poster_1.png" alt="Presenting MGD at NeurIPS 2023" width="1280" height="576" loading="lazy" decoding="async"></a><figcaption>Presenting MGD at NeurIPS 2023</figcaption></figure>
+      <figure><a href="assets/carousel_images/startup_certificate.png" target="_blank" rel="noopener" aria-label="Enlarge: Receiving a startup certificate from the Chief Minister of Chhattisgarh"><img src="assets/carousel_images/startup_certificate.png" alt="Receiving a startup certificate from the Chief Minister of Chhattisgarh" width="1280" height="576" loading="lazy" decoding="async"></a><figcaption>Receiving a startup certificate from the Chief Minister of Chhattisgarh</figcaption></figure>
+      <figure><a href="assets/carousel_images/neurips_poster_2.png" target="_blank" rel="noopener" aria-label="Enlarge: Conversations at the NeurIPS 2023 poster session"><img src="assets/carousel_images/neurips_poster_2.png" alt="Conversations at the NeurIPS 2023 poster session" width="1280" height="576" loading="lazy" decoding="async"></a><figcaption>Conversations at the NeurIPS 2023 poster session</figcaption></figure>
+      <figure><a href="assets/carousel_images/convocation.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Receiving institute medals at IIIT-Delhi convocation"><img src="assets/carousel_images/convocation.jpg" alt="Receiving institute medals at IIIT-Delhi convocation" width="5120" height="2304" loading="lazy" decoding="async"></a><figcaption>Receiving institute medals at IIIT-Delhi convocation</figcaption></figure>
+      <figure><a href="assets/carousel_images/hackathon.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Presenting MGD at Microsoft Global Hackathon"><img src="assets/carousel_images/hackathon.jpg" alt="Presenting MGD at Microsoft Global Hackathon" width="967" height="435" loading="lazy" decoding="async"></a><figcaption>Presenting MGD at Microsoft Global Hackathon</figcaption></figure>
+    </div>
+  </section>
+  <section class="section bottom-updates" id="updates-archive" aria-labelledby="archive-heading">
+    <div class="section-heading"><div><span class="eyebrow">Archive</span><h2 id="archive-heading">Updates</h2></div></div>
+    <ul class="news-list">
+          <li><time datetime="2026-08">Aug 2026</time><div class="item">Invited talk at Etsy's <b>AI Stitch</b> series: <i>From Prompts to Programs: Text Optimization with GEPA and DSPy</i>.</div></li>
+          <li><time datetime="2026-08">Aug 2026</time><div class="item">Released <a href="https://x.com/BhavyaChopra1/status/2089780200968163436">observability and steerability tools</a> for GEPA and optimize_anything, re-architecting GEPA around HCI principles so that people and agents alike can inspect and steer an optimization run.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item">New GEPA blog post on <a href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/">parallel proposals</a>, which make optimization 3–4× faster.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item">Released <a href="https://gepa-ai.github.io/gepa/blog/2026/07/22/optimize-anything-omni/">optimize_anything omni</a>, a meta-optimizer that composes GEPA, AutoResearch, and Meta-Harness and beats every standalone optimizer under a matched budget.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item"><a href="https://arxiv.org/abs/2512.04123">Measuring Agents in Production</a>, appearing as <i>Characterizing Agents in Production</i>, presented as an <b>Oral at ICML 2026</b> in Seoul.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item"><a href="https://arxiv.org/abs/2604.04247">Combee</a> accepted to COLM 2026.</div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="item">Main-stage talk, <i>Self-Improvement of Context, Harness, and Model Weights through Reflective Optimization</i>, at the <a href="https://www.ai.engineer/worldsfair/schedule?q=Lakshya+Agrawal&amp;session=asn_slot_2026_07_01_main_stage_0900_2026_06_03t09_49_39_605z">AI Engineer World's Fair</a> in San Francisco.</div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="item">Invited talk at Netflix Research on GEPA, optimize_anything, and Fast-Slow Training.</div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="item">Wrote <a href="https://x.com/i/article/2066378829221036033">Owning Your Token Capital</a>, an essay on building the enterprise AI learning loop, in response to Satya Nadella's article on enterprise AI.</div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="item">Microsoft AI's <a href="https://x.com/mustafasuleyman/status/2061880164498428188">MAI-Thinking-1</a> used GEPA-optimized LLM judges to filter its pre-training data.</div></li>
+          <li><time datetime="2026-05">May 2026</time><div class="item"><a href="https://arxiv.org/abs/2605.19633">optimize_anything</a> and <a href="https://arxiv.org/abs/2508.04660">Multi-module GRPO</a> both receive <b>Industry Spotlight Awards</b> at the inaugural <a href="https://www.caisconf.org/">ACM CAIS 2026</a> (<a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">talk</a>).</div></li>
+          <li><time datetime="2026-05">May 2026</time><div class="item">Released <a href="https://arxiv.org/abs/2605.12484">Learning, Fast and Slow</a>, introducing Fast-Slow Training for continual learning in LLMs.</div></li>
+          <li><time datetime="2026-05">May 2026</time><div class="item">Invited talk on GEPA and text optimization in <a href="https://dsc.ucsd.edu/~arunkk/">Prof. Arun Kumar</a>'s CSE/DSC 234 at UC San Diego on May 11 (<a href="https://www.youtube.com/watch?v=vJ6F2duUC_0">recording</a>).</div></li>
+            <li><time datetime="2026-04">Apr 2026</time><div class="item">Presented GEPA as an <b>Oral at ICLR 2026</b> in Rio de Janeiro (<a href="https://www.youtube.com/watch?v=HbGah-uP1fI">recording</a>).</div></li>
+            <li><time datetime="2026-03">Mar 2026</time><div class="item">Nous Research <a href="https://github.com/NousResearch/hermes-agent-self-evolution/blob/main/reports/phase1_validation_report.pdf">reports</a> using GEPA and DSPy for agent self-evolution and skill optimization, with a 39.5% gain.</div></li>
+            <li><time datetime="2026-02">Feb 2026</time><div class="item">Released <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">optimize_anything</a>, a universal API for optimizing any text parameter, and <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/automatically-learning-skills-for-coding-agents/">gskill</a>, which learns skills for coding agents automatically. Launched the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA blog</a>.</div></li>
+            <li><time datetime="2026-01">Jan 2026</time><div class="item"><b>GEPA accepted to ICLR 2026 as an Oral</b> (top ~2% of submissions).</div></li>
+            <li><time datetime="2025-12">Dec 2025</time><div class="item"><a href="https://arxiv.org/abs/2503.13657">Why Do Multi-Agent LLM Systems Fail?</a> presented as a <b>Spotlight</b> in the NeurIPS 2025 Datasets &amp; Benchmarks track.</div></li>
+            <li><time datetime="2025-12">Dec 2025</time><div class="item">Presented GEPA at the <a href="https://neurips.cc/virtual/2025/workshop/109559">Foundations of Reasoning in Language Models</a> workshop at NeurIPS 2025.</div></li>
+            <li><time datetime="2025-12">Dec 2025</time><div class="item">Interviewed on the <a href="https://www.youtube.com/watch?v=HtxnqtTQKuQ">Delta Podcast</a>.</div></li>
+            <li><time datetime="2025-11">Nov 2025</time><div class="item">GEPA featured in the <a href="https://cookbook.openai.com/examples/partners/self_evolving_agents/autonomous_agent_retraining">OpenAI Cookbook</a> tutorial <i>Self-Evolving Agents</i>, written with Bain &amp; Company.</div></li>
+            <li><time datetime="2025-11">Fall 2025</time><div class="item">Named an <a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/">Amazon AI PhD Fellow</a>.</div></li>
+            <li><time datetime="2025-11">Fall 2025</time><div class="item">Recognized as a <b>Top Reviewer</b> at NeurIPS 2025.</div></li>
+            <li><time datetime="2025-10">Oct 2025</time><div class="item">Joined the <a href="https://www.laude.org/">Laude Institute</a> as an Open Research Resident. GEPA receives a <a href="https://slingshots.laude.org/">Laude Slingshot</a>.</div></li>
+            <li><time datetime="2025-09">Sep 2025</time><div class="item">Databricks reports that <a href="https://www.databricks.com/blog/building-state-art-enterprise-agents-90x-cheaper-automated-prompt-optimization">open models optimized with GEPA beat Claude Opus 4.1 at ~90× lower cost</a>.</div></li>
+            <li><time datetime="2025-08">Aug 2025</time><div class="item"><a href="https://aclanthology.org/2025.findings-emnlp.1172/">LangProBe</a> accepted to EMNLP 2025 Findings.</div></li>
+            <li><time datetime="2025-08">Aug 2025</time><div class="item">GEPA featured in <a href="https://venturebeat.com/ai/gepa-optimizes-llms-without-costly-reinforcement-learning">VentureBeat</a> and DeepLearning.AI's <i>The Batch</i>. Joined the <a href="https://www.youtube.com/watch?v=fREQrxhBSk0">Weaviate Podcast</a> (#127) to discuss it.</div></li>
+            <li><time datetime="2025-07">Jul 2025</time><div class="item">Released the <a href="https://arxiv.org/abs/2507.19457">GEPA paper</a> and <a href="https://github.com/gepa-ai/gepa">open-source package</a>: reflective prompt evolution outperforms GRPO with up to 35× fewer rollouts.</div></li>
+            <li><time datetime="2025-05">May 2025</time><div class="item">Released <a href="https://x.com/lateinteraction/status/1919428454761553994">dspy.GRPO</a>, the first open-source GRPO pipeline for multi-module LLM programs, with Noah Ziems, Dilara Soylu, and Omar Khattab.</div></li>
+            <li><time datetime="2025-01">Jan 2025</time><div class="item">Invited talk at AMD's <i>What's New in Labs</i> series on AI-driven code performance optimization for new accelerators.</div></li>
+            <li><time datetime="2024-08">Aug 2024</time><div class="item">Started my PhD at UC Berkeley.</div></li>
+            <li><time datetime="2023-12">Dec 2023</time><div class="item">Presented <a href="https://neurips.cc/virtual/2023/poster/70362">Monitor-Guided Decoding</a> at NeurIPS 2023 in New Orleans.</div></li>
+            <li><time datetime="2023">2023</time><div class="item">Won <a href="https://www.credly.com/badges/6d4c10c9-79f8-409c-aa2a-83c3871c56b3">first place at the Microsoft Global Hackathon</a> on AI tools for developer productivity.</div></li>
+          </ul>
   </section>
   <section class="contact" aria-label="Get in touch"><h2>Let’s talk.</h2><div><p>I look forward to learning about the use cases and failure modes of AI systems, and the research questions they raise.</p><a href="mailto:lakshyaaagrawal@berkeley.edu">lakshyaaagrawal@berkeley.edu <span aria-hidden="true">↗</span></a></div></section>
 </main>

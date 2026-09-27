@@ -27,7 +27,6 @@
   var buttons = Array.from(controls.querySelectorAll('[data-filter]'));
   var works = Array.from(document.querySelectorAll('.work'));
   var status = document.querySelector('.research-status');
-  var showAll = document.querySelector('.show-all');
   var filter = 'selected';
   var labels = { selected: 'Selected work', all: 'All work', harness: 'Harness optimization', training: 'Model training & RL', evaluation: 'Evaluation', code: 'AI for code', systems: 'Programming languages & systems' };
 
@@ -43,18 +42,44 @@
       button.setAttribute('aria-pressed', String(button.dataset.filter === value));
     });
     status.textContent = labels[value] + ' · ' + visible + ' of ' + works.length + ' papers & projects';
-    showAll.hidden = value === 'all';
   }
   controls.hidden = false;
   buttons.forEach(function (button) {
     button.addEventListener('click', function () { setFilter(button.dataset.filter); });
   });
-  showAll.addEventListener('click', function () {
-    setFilter('all');
-    buttons.find(function (button) { return button.dataset.filter === 'all'; }).focus({ preventScroll: true });
-    document.getElementById('research').scrollIntoView({ behavior: 'instant' });
-  });
   setFilter(filter);
+
+  // One archive, shown near the footer unless the top disclosure is open.
+  var news = document.getElementById('news');
+  var archive = document.getElementById('updates-archive');
+  var newsList = archive.querySelector('.news-list');
+  document.querySelector('.news-fallback').hidden = true;
+  function placeNews() {
+    (news.open ? news : archive).appendChild(newsList);
+    archive.hidden = news.open;
+  }
+  news.addEventListener('toggle', placeNews);
+  placeNews();
+
+  // All five photographs remain available without JavaScript or autoplay.
+  var gallery = document.querySelector('.photo-gallery');
+  var galleryControls = document.querySelector('.gallery-controls');
+  var galleryButtons = Array.from(galleryControls.querySelectorAll('button'));
+  galleryControls.hidden = false;
+  function updateGalleryControls() {
+    galleryButtons[0].disabled = gallery.scrollLeft < 2;
+    galleryButtons[1].disabled = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 2;
+  }
+  galleryButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var step = gallery.querySelector('figure').getBoundingClientRect().width + 18;
+      gallery.scrollBy({ left: Number(button.dataset.galleryStep) * step,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    });
+  });
+  gallery.addEventListener('scroll', updateGalleryControls, { passive: true });
+  window.addEventListener('resize', updateGalleryControls);
+  updateGalleryControls();
 
   // Preserve old section links and reveal a project when linking directly to it.
   var topicAnchors = { harness: 'harness', 'post-training': 'training', evaluation: 'evaluation', ai4code: 'code', pl: 'systems', publications: 'all', software: 'all' };
