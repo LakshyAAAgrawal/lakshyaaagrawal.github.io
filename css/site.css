@@ -56,18 +56,16 @@ nav a:hover, nav a[aria-current] { color: var(--accent); }
 .theme-toggle { border: 1px solid var(--line); border-radius: 50%; background: none; width: 34px; height: 34px; padding: 0; display: grid; place-items: center; }
 .theme-toggle:hover { background: var(--hover); }
 .theme-symbol { font: 22px/1 Georgia, serif; }
-.intro { display: grid; grid-template-columns: minmax(0, 1fr) 248px; column-gap: 70px; padding: 65px 0 40px; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 248px; grid-template-rows: auto 1fr; align-items: start; column-gap: 70px; padding: 65px 0 40px; }
 .identity { display: contents; }
 .identity h1 { grid-column: 1; grid-row: 1; margin-bottom: 26px; }
 .profile-sidebar { grid-column: 2; grid-row: 1 / 3; }
 .portrait { display: block; width: 248px; height: 290px; object-fit: cover; object-position: 50% 42%; border-radius: 3px; margin-top: 5px; }
 .intro-copy { grid-column: 1; grid-row: 2; }
 .intro-copy p { font-size: var(--prose-size); line-height: var(--prose-leading); }
-.fellowships { color: var(--muted); font-size: 11px; line-height: 1.8; margin: 13px 0 8px; }
-.fellowships a { display: block; min-height: 24px; }
-.fellowships span { display: none; }
-.fellowships span { margin: 0 8px; }
-.fellowships a { color: var(--muted); }
+.profile-summary { color: var(--muted); font-size: 11px; line-height: 1.8; margin: 13px 0 8px; }
+.profile-summary > span { display: block; }
+.profile-summary a { color: inherit; }
 .profile-links { display: grid; grid-template-columns: repeat(3, max-content); gap: 0 16px; }
 .profile-links a { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; padding-block: 5px; }
 .profile-links a span { font-size: 11px; margin-left: 2px; }
@@ -183,6 +181,7 @@ summary::-webkit-details-marker { display: none; }
 .link-icon { width: 15px; height: 15px; flex-shrink: 0; fill: currentColor; vertical-align: -.15em; }
 .talk-links a { display: inline-flex; align-items: center; gap: 6px; min-height: 24px; }
 .research-section { border-bottom: 0; padding-bottom: 0; }
+#talks { border-bottom: 0; padding-bottom: 0; }
 .talks-feature { display: grid; grid-template-columns: 1.05fr 1fr; align-items: start; gap: 38px; margin-bottom: 30px; }
 .featured-talk-card { display: block; border: 0; padding: 0; background: var(--surface); border-radius: 3px; overflow: hidden; }
 .featured-talk-card .talk-copy { padding: 24px; }
@@ -239,7 +238,7 @@ summary::-webkit-details-marker { display: none; }
   .identity { display: grid; width: max-content; max-width: 100%; grid-template-columns: max-content; margin: 0 auto 25px; }
   .identity h1 { grid-column: 1; grid-row: 2; font-size: clamp(27px, 7.4vw, 43px); white-space: nowrap; letter-spacing: -1.2px; margin: 18px 0 0; }
   .profile-sidebar { display: contents; }
-  .profile-sidebar .fellowships { grid-column: 1; grid-row: 3; font-size: 11px; text-align: center; }
+  .profile-sidebar .profile-summary { grid-column: 1; grid-row: 3; width: 0; min-width: 100%; text-align: center; }
   .profile-sidebar .profile-links { grid-column: 1; grid-row: 4; width: 0; min-width: 100%; justify-content: center; }
   .portrait { grid-column: 1; grid-row: 1; width: 0; min-width: 100%; height: auto; aspect-ratio: 1.12; margin: 0; }
   .profile-links { gap: 5px 12px; }
