@@ -1,0 +1,121 @@
+{
+  "recorded_on": "2026-09-27",
+  "citations_source": "User-provided googlescholar.txt, recorded on the date above; export date not specified.",
+  "citation_policy": "Use one matching primary record per paper. Do not sum duplicate titles or preprint/conference records. Preserve Scholar asterisks; omit counts not provided. No aggregate total inferred.",
+  "citations": [
+    {
+      "id": "gepa",
+      "count": 616,
+      "asterisk": false,
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22GEPA%3A%20Reflective%20Prompt%20Evolution%20Can%20Outperform%20Reinforcement%20Learning%22"
+    },
+    {
+      "id": "fst",
+      "count": 5,
+      "asterisk": false,
+      "title": "Learning, fast and slow: Towards LLMs that adapt continually",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Learning%2C%20fast%20and%20slow%3A%20Towards%20LLMs%20that%20adapt%20continually%22"
+    },
+    {
+      "id": "optimize-anything",
+      "count": 1,
+      "asterisk": false,
+      "title": "optimize_anything: Unified Text Optimization can Outperform Specialized Systems",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22optimize_anything%3A%20Unified%20Text%20Optimization%20can%20Outperform%20Specialized%20Systems%22"
+    },
+    {
+      "id": "mmgrpo",
+      "count": 5,
+      "asterisk": false,
+      "title": "Composing Policy Gradients and Prompt Optimization for Language Model Programs",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Composing%20Policy%20Gradients%20and%20Prompt%20Optimization%20for%20Language%20Model%20Programs%22"
+    },
+    {
+      "id": "mast",
+      "count": 952,
+      "asterisk": true,
+      "title": "Why Do Multiagent Systems Fail?",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Why%20Do%20Multiagent%20Systems%20Fail%3F%22"
+    },
+    {
+      "id": "map",
+      "count": 83,
+      "asterisk": false,
+      "title": "Measuring agents in production",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Measuring%20agents%20in%20production%22"
+    },
+    {
+      "id": "langprobe",
+      "count": 6,
+      "asterisk": true,
+      "title": "LangProBe: a Language Program Benchmark.",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22LangProBe%3A%20a%20Language%20Program%20Benchmark.%22"
+    },
+    {
+      "id": "mgd",
+      "count": 106,
+      "asterisk": true,
+      "title": "Monitor-guided decoding of code lms with static analysis of repository context",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Monitor-guided%20decoding%20of%20code%20lms%20with%20static%20analysis%20of%20repository%20context%22"
+    },
+    {
+      "id": "gskill",
+      "count": 2,
+      "asterisk": false,
+      "title": "Automatically Learning Skills for Coding Agents",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Automatically%20Learning%20Skills%20for%20Coding%20Agents%22"
+    },
+    {
+      "id": "combee",
+      "count": 6,
+      "asterisk": false,
+      "title": "Combee: Scaling prompt learning for self-improving language model agents",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Combee%3A%20Scaling%20prompt%20learning%20for%20self-improving%20language%20model%20agents%22"
+    },
+    {
+      "id": "barbarians",
+      "count": 74,
+      "asterisk": true,
+      "title": "Barbarians at the gate: How ai is upending systems research",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22Barbarians%20at%20the%20gate%3A%20How%20ai%20is%20upending%20systems%20research%22"
+    },
+    {
+      "id": "sparql",
+      "count": 14,
+      "asterisk": false,
+      "title": "A SPARQL to cypher transpiler: Proposal and initial results",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22A%20SPARQL%20to%20cypher%20transpiler%3A%20Proposal%20and%20initial%20results%22"
+    },
+    {
+      "id": "sentiment",
+      "count": 15,
+      "asterisk": false,
+      "title": "A novel sentiment analysis engine for preliminary depression status estimation on social media",
+      "source_url": "https://scholar.google.com/scholar?hl=en&q=%22A%20novel%20sentiment%20analysis%20engine%20for%20preliminary%20depression%20status%20estimation%20on%20social%20media%22"
+    }
+  ],
+  "software": [
+    {
+      "id": "gepa-software",
+      "repository": "gepa-ai/gepa",
+      "stars": 6759,
+      "package": "gepa",
+      "downloads_last_month": 7281799,
+      "downloads_display": "7.28M",
+      "stars_source": "https://api.github.com/repos/gepa-ai/gepa",
+      "downloads_source": "https://pypistats.org/api/packages/gepa/recent"
+    },
+    {
+      "id": "multilspy",
+      "repository": "microsoft/multilspy",
+      "stars": 611,
+      "package": "multilspy",
+      "downloads_last_month": 35413,
+      "downloads_display": "35.4K",
+      "stars_source": "https://api.github.com/repos/microsoft/multilspy",
+      "downloads_source": "https://pypistats.org/api/packages/multilspy/recent"
+    }
+  ],
+  "downloads_policy": "PyPI Stats recent_downloads last_month snapshot, excluding known mirrors. Includes CI/CD downloads. Not unique users, installations, or all-time downloads."
+}
