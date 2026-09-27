@@ -11,6 +11,34 @@ const articles = source => [...source.matchAll(/<article\b[^>]*>[\s\S]*?<\/artic
 const attr = (source, name) => source.match(new RegExp('\\b' + name + '="([^"]*)"'))?.[1];
 const papers = articles(section('research'));
 const projects = articles(section('software'));
+const metrics = JSON.parse(fs.readFileSync(path.join(root, 'data/metrics.json'), 'utf8'));
+
+test('citation and software counts match the dated source snapshot', () => {
+  assert.equal(metrics.citations.length, 13);
+  assert.equal((section('research').match(/class="citation-count"/g) || []).length, 13);
+  for (const metric of metrics.citations) {
+    const paper = papers.find(p => attr(p, 'id') === metric.id);
+    const label = metric.count + (metric.asterisk ? '*' : '') + (metric.count === 1 ? ' citation' : ' citations');
+    assert.ok(paper.includes('>' + label + '</a>'), metric.id);
+    assert.ok(paper.includes(metric.source_url.replaceAll('&', '&amp;')), metric.id);
+  }
+  assert.equal(metrics.citations.find(m => m.id === 'gepa').count, 616);
+  assert.equal(metrics.citations.find(m => m.id === 'optimize-anything').count, 1);
+  assert.ok(!papers.find(p => attr(p, 'id') === 'knowing-is-not-seeing').includes('citation-count'));
+  assert.equal((section('software').match(/class="software-metrics"/g) || []).length, 2);
+  for (const metric of metrics.software) {
+    const project = projects.find(p => attr(p, 'id') === metric.id);
+    assert.ok(project.includes(metric.stars.toLocaleString('en-US') + ' GitHub stars'));
+    assert.ok(project.includes(metric.downloads_display + ' PyPI downloads'));
+    assert.ok(project.includes(metric.downloads_last_month.toLocaleString('en-US') + ' downloads'));
+    assert.ok(project.includes('https://pypistats.org/packages/' + metric.package));
+    assert.ok(project.includes('in the past month'));
+  }
+  assert.ok(section('research').includes('Duplicate records are not combined'));
+  assert.ok(section('software').includes('not unique users'));
+  assert.ok(section('research').includes('datetime="' + metrics.recorded_on + '"'));
+  assert.ok(section('software').includes('datetime="' + metrics.recorded_on + '"'));
+});
 
 test('publications and software are distinct, with a thumbnail per entry', () => {
   assert.equal(papers.length, 14);
