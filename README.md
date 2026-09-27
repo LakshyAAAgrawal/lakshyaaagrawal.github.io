@@ -26,9 +26,11 @@ The site is a single hand-written static page with no build step or framework.
 - Keep each project's summary, publication metadata, author list, code, and related links together. Full authorship is available in the entry's native disclosure. Do not add a second publications or software list for the same work.
 - Talks have their own section; only presentations by Lakshya belong there. Historical announcements live in the expandable news archive.
 - Filter counts are calculated automatically. The All work filter reveals the complete collection.
-- Keep a single news list in the bottom archive. JavaScript moves it into the top Updates disclosure while that disclosure is open, then returns it below when closed.
-- Talks and background are fully open. Label private invitations explicitly, and distinguish recordings, slides, and event pages. Link video segments to their start time and show the time range.
-- All five original photos live in a separate, manually scrollable gallery with captions and links to full-size images. Do not autoplay it.
+- Keep a single news list in the top Updates disclosure: it expands in place even without JavaScript. JavaScript moves it to the bottom archive while the top disclosure is closed, then returns it on expansion.
+- Talks and background are fully open. Use recording, slides, and event links where available; otherwise just name the venue. Link video segments to their start time and show the time range.
+- Blog posts have a separate section, with GEPA team/community attribution rather than implying sole authorship. The nine GEPA entries reflect the live blog index on September 26, 2026.
+- All five original photos live in a separate gallery with captions and links to full-size images. It advances every six seconds while visible, pauses on hover/focus, and has play/pause and previous/next controls. Reduced-motion preferences disable automatic movement by default; manual navigation pauses playback.
+- Keep the asset-version query strings on the stylesheet and script in sync when changing interactions, so a cached script cannot be paired with incompatible new markup. The static HTML retains eight selected projects and their count until JavaScript initializes; without JavaScript all projects remain readable.
 - Update the "Last updated" line in the footer and `lastmod` in `sitemap.xml` when publishing.
 - To preview locally: `python3 -m http.server 8000` in the repository root, then open <http://localhost:8000/>.
 - For a preview listening on local network interfaces, use `python3 -m http.server 8000 --bind 0.0.0.0`. Network/firewall settings still determine access from another device.

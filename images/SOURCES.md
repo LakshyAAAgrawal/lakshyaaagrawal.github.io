@@ -17,6 +17,20 @@ New local assets:
 - `talks/laude-podcast.jpg`: thumbnail of [the podcast with Andy Konwinski](https://www.youtube.com/watch?v=mmpW36WdFbI&t=2707s), linking to Lakshya’s segment at 45:07–48:36.
 - `talks/laude-frontier.jpg`: thumbnail of [Laude Open Frontier](https://www.youtube.com/watch?v=rePCdzfITKc&t=1131), linking to Lakshya’s GEPA presentation at 18:51–36:31.
 
-The essay has a small HTML/CSS learning-loop illustration, rather than an unrelated stock image.
+The personal essay uses a journal icon; GEPA posts use their own figures or the project logo.
 
 YouTube thumbnails are served locally and link to their respective videos; no video embeds or autoplay are used. Scientific figures retain their aspect ratios and link to a larger view. Alternate text describes the subject of each visual.
+
+## Link icons and affiliations
+
+Inline SVG icons in `index.html` are from [Bootstrap Icons](https://github.com/twbs/icons), under the MIT license preserved in `images/BOOTSTRAP-ICONS-LICENSE.txt`. They supplement visible labels rather than replacing them. Institution logos in `images/logos/` are reused from the deployed `master` website.
+
+## Blog thumbnails
+
+The blog collection was checked against [GEPA’s sitemap](https://gepa-ai.github.io/gepa/sitemap.xml) on September 26, 2026. New thumbnails are resized to at most 640 pixels, retain their native aspect ratios, and link to the corresponding post:
+- `blogs/subjectivity.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-09-17-bridging-the-subjectivity-gap/images/subjectivity-gap.png).
+- `blogs/parallel.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-07-30-parallel-proposals/images/throughput.png).
+- `blogs/omni.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-07-22-optimize-anything-omni/images/omni_bar.png).
+- `blogs/combee.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-04-09-gepa-at-scale-with-combee/images/design.png).
+- `blogs/confidence.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-03-17-confidence-adapter-benchmark/images/accuracy_comparison.png).
+- `blogs/skills.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-02-18-automatically-learning-skills-for-coding-agents/gskill-pipeline.png).

@@ -21,7 +21,8 @@
     try { localStorage.setItem('theme', next); } catch (error) { /* Device preference is optional. */ }
     updateThemeButton();
   });
-  preference.addEventListener('change', updateThemeButton);
+  if (preference.addEventListener) preference.addEventListener('change', updateThemeButton);
+  else if (preference.addListener) preference.addListener(updateThemeButton);
 
   var controls = document.querySelector('.research-controls');
   var buttons = Array.from(controls.querySelectorAll('[data-filter]'));
@@ -52,8 +53,7 @@
   // One archive, shown near the footer unless the top disclosure is open.
   var news = document.getElementById('news');
   var archive = document.getElementById('updates-archive');
-  var newsList = archive.querySelector('.news-list');
-  document.querySelector('.news-fallback').hidden = true;
+  var newsList = news.querySelector('.news-list');
   function placeNews() {
     (news.open ? news : archive).appendChild(newsList);
     archive.hidden = news.open;
@@ -61,25 +61,64 @@
   news.addEventListener('toggle', placeNews);
   placeNews();
 
-  // All five photographs remain available without JavaScript or autoplay.
+  // Auto-advance only while visible. Pause on hover/focus and respect reduced motion.
   var gallery = document.querySelector('.photo-gallery');
   var galleryControls = document.querySelector('.gallery-controls');
-  var galleryButtons = Array.from(galleryControls.querySelectorAll('button'));
+  var galleryButtons = Array.from(galleryControls.querySelectorAll('[data-gallery-step]'));
+  var playback = galleryControls.querySelector('.gallery-playback');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var playing = !reducedMotion.matches;
+  var galleryVisible = false;
+  var hovering = false;
+  var focused = false;
+  var galleryTimer;
   galleryControls.hidden = false;
-  function updateGalleryControls() {
-    galleryButtons[0].disabled = gallery.scrollLeft < 2;
-    galleryButtons[1].disabled = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 2;
+  function scheduleGallery() {
+    clearTimeout(galleryTimer);
+    if (playing && galleryVisible && !hovering && !focused && !document.hidden) {
+      galleryTimer = setTimeout(function () { advanceGallery(1); scheduleGallery(); }, 6000);
+    }
+  }
+  function updatePlayback() {
+    playback.textContent = playing ? 'Pause' : 'Play';
+    playback.setAttribute('aria-label', (playing ? 'Pause' : 'Play') + ' photo carousel');
+    scheduleGallery();
+  }
+  function advanceGallery(direction) {
+    var step = gallery.querySelector('figure').getBoundingClientRect().width + 18;
+    var end = gallery.scrollWidth - gallery.clientWidth;
+    var position = gallery.scrollLeft + direction * step;
+    if (direction > 0 && gallery.scrollLeft >= end - 2) position = 0;
+    if (direction < 0 && gallery.scrollLeft <= 2) position = end;
+    gallery.scrollTo({ left: position, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
   }
   galleryButtons.forEach(function (button) {
     button.addEventListener('click', function () {
-      var step = gallery.querySelector('figure').getBoundingClientRect().width + 18;
-      gallery.scrollBy({ left: Number(button.dataset.galleryStep) * step,
-        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      playing = false;
+      updatePlayback();
+      advanceGallery(Number(button.dataset.galleryStep));
     });
   });
-  gallery.addEventListener('scroll', updateGalleryControls, { passive: true });
-  window.addEventListener('resize', updateGalleryControls);
-  updateGalleryControls();
+  playback.addEventListener('click', function () { playing = !playing; updatePlayback(); });
+  gallery.addEventListener('mouseenter', function () { hovering = true; scheduleGallery(); });
+  gallery.addEventListener('mouseleave', function () { hovering = false; scheduleGallery(); });
+  gallery.addEventListener('focusin', function () { focused = true; scheduleGallery(); });
+  gallery.addEventListener('focusout', function (event) {
+    focused = gallery.contains(event.relatedTarget); scheduleGallery();
+  });
+  gallery.addEventListener('touchstart', function () { playing = false; updatePlayback(); }, { passive: true });
+  gallery.addEventListener('wheel', function () { playing = false; updatePlayback(); }, { passive: true });
+  document.addEventListener('visibilitychange', scheduleGallery);
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', function () {
+    if (reducedMotion.matches) { playing = false; updatePlayback(); }
+  });
+  if ('IntersectionObserver' in window) {
+    var galleryObserver = new IntersectionObserver(function (entries) {
+      galleryVisible = entries[0].isIntersecting; scheduleGallery();
+    }, { threshold: 0.25 });
+    galleryObserver.observe(gallery);
+  }
+  updatePlayback();
 
   // Preserve old section links and reveal a project when linking directly to it.
   var topicAnchors = { harness: 'harness', 'post-training': 'training', evaluation: 'evaluation', ai4code: 'code', pl: 'systems', publications: 'all', software: 'all' };
@@ -116,6 +155,6 @@
         });
       });
     }, { rootMargin: '-15% 0px -65% 0px' });
-    ['about', 'research', 'talks', 'background'].forEach(function (id) { observer.observe(document.getElementById(id)); });
+    ['about', 'research', 'talks', 'blogs', 'background'].forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
 })();
