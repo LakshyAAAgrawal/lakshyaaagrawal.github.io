@@ -116,9 +116,6 @@ summary::-webkit-details-marker { display: none; }
 .work h3 { font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
 .work-venue { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 9px; font-size: 13px; margin: 3px 0 5px; }
 .distinction { font-weight: 600; }
-.metrics-note { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
-.citation-count { white-space: nowrap; }
-.venue-divider { margin-left: 3px; color: var(--muted); }
 .software-metrics { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 8px; font-size: 13px; margin: 3px 0 6px; }
 .software-metrics > span, .metric-period { color: var(--muted); }
 .distinction::before { content: "·"; margin-right: 9px; font-weight: 400; }
