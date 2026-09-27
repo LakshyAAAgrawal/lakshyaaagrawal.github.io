@@ -38,9 +38,9 @@ The site is a single hand-written static page with no build step or framework.
 
 ## Design and behavior
 
-The homepage uses a two-column research layout on desktop and a single column on mobile, with a warm light theme and a system-aware dark theme. Research figures link to larger views; talks use locally served video thumbnails. Images below the introduction load lazily. The mobile portrait matches the width of the name using CSS. Motion honors `prefers-reduced-motion`; controls are keyboard accessible. Legacy section anchors still resolve, and direct links to unselected projects reveal those entries. The complete collection remains available without JavaScript and when printing.
+The `faculty-layout` branch uses a single reading column for research, talks, blog posts, coverage, news, and background. Modest system-font headings, blue links, a white background, and unboxed entries keep the presentation close to a conventional faculty homepage. The system-aware dark theme remains available. On desktop, the bio wraps around the right-hand portrait and profile links; on mobile, the profile stacks above it. Research figures and talk thumbnails sit beside their entries, not in separate content columns. Research figures link to larger views, and all existing images and content are retained. Images below the introduction load lazily. The mobile portrait matches the width of the name using CSS. Motion honors `prefers-reduced-motion`; controls are keyboard accessible. Legacy section anchors still resolve, and direct links to unselected projects reveal those entries. The complete collection remains available without JavaScript and when printing.
 
-The site keeps Google Analytics and the hidden MapMyVisitors tracker. No private source notes or session transcripts are included. The `site-redesign` branch is for development; `master` is the existing deployment branch.
+The site keeps Google Analytics and the hidden MapMyVisitors tracker. No private source notes or session transcripts are included. `faculty-layout` is the quieter layout experiment; `site-redesign` retains the previous design, and `master` is the existing deployment branch.
 
 ## Acknowledgements
 
