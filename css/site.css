@@ -4,6 +4,7 @@
   --bg: #fff; --surface: #f5f5f5; --text: #252525; --muted: #606060;
   --accent: #205b93; --line: #dedede; --hover: #eef3f7;
   --sans: Arial, Helvetica, sans-serif;
+  --logo-filter: none;
   --prose-size: 15px; --prose-leading: 1.6;
 }
 @media (prefers-color-scheme: dark) {
@@ -11,12 +12,14 @@
     color-scheme: dark;
     --bg: #191b1d; --surface: #25282b; --text: #e6e6e6;
     --muted: #b3b6b9; --accent: #9ac7f0; --line: #414549; --hover: #293540;
+    --logo-filter: invert(1) hue-rotate(180deg);
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #191b1d; --surface: #25282b; --text: #e6e6e6;
   --muted: #b3b6b9; --accent: #9ac7f0; --line: #414549; --hover: #293540;
+  --logo-filter: invert(1) hue-rotate(180deg);
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; -webkit-text-size-adjust: 100%; }
@@ -59,6 +62,8 @@ nav a[aria-current] { text-decoration: underline; }
 .intro-copy p { font-size: var(--prose-size); line-height: var(--prose-leading); }
 .profile-summary { font-size: 12px; line-height: 1.65; margin: 10px 0 7px; color: var(--muted); }
 .profile-summary > span { display: block; }
+/* Sized so the role line spans the 218px portrait width in Arial. */
+.profile-role { font-size: 15.6px; line-height: 1.4; white-space: nowrap; color: var(--text); margin-bottom: 2px; }
 .profile-links { display: flex; flex-wrap: wrap; gap: 1px 14px; }
 .profile-links a { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; min-height: 27px; padding-block: 2px; }
 .eyebrow { display: block; font-size: 12px; font-weight: 400; line-height: 1.5; color: var(--muted); }
@@ -193,7 +198,9 @@ summary::-webkit-details-marker { display: none; }
 .affiliation-logos { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 18px 22px; margin: 0; padding: 0; list-style: none; }
 .affiliation-logos li { width: 100px; }
 .affiliation-logos a { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; font-size: 11px; line-height: 1.4; }
-.affiliation-logos img { width: 88px; height: 40px; object-fit: contain; padding: 3px; background: #fff; }
+.affiliation-logos img { width: 88px; height: 40px; object-fit: contain; }
+/* Dark, mostly single-colour marks flip to light in dark mode; full-colour marks keep their brand colours. */
+.affiliation-logos .logo-invert { filter: var(--logo-filter); }
 .beyond { margin-top: 24px; }
 .photo-heading { display: flex; justify-content: flex-end; margin-top: 16px; }
 .gallery-controls { display: flex; gap: 8px; }
