@@ -4,7 +4,7 @@ Research visuals stay attached to their project entries. Existing figures in `si
 
 ## Publication and software split
 
-- `blogs/on-policy-distillation.jpg`: user-supplied `HLR7rClaAAAClUQ.jpeg` from Downloads, copied unchanged for the distillation post.
+- `blogs/on-policy-distillation.jpg`: figure for the on-policy distillation post.
 - `research/barbarians.png`: [ADRS architecture figure](https://arxiv.org/html/2512.14806v1/ADRS_evolve_v5.png) from *Let the Barbarians In*.
 - Combee and gskill publication entries reuse their respective blog figures listed below.
 - `projects/language-server.png`: [Language Server Protocol overview diagram](https://raw.githubusercontent.com/microsoft/language-server-protocol/gh-pages/_overviews/lsp/img/language-server.png), used to illustrate the protocol multilspy implements, not presented as a multilspy-specific result.
@@ -12,7 +12,7 @@ Research visuals stay attached to their project entries. Existing figures in `si
 - `projects/streamblocks.png`: [CAL actor diagram](https://raw.githubusercontent.com/streamblocks/streamblocks-graalvm/master/res/ActorModel.png) from the StreamBlocks GraalVM repository.
 - `projects/maxima.png`: [Maxima computation and plotting example](https://maxima.sourceforge.io/img/maxima-banner.png), used to illustrate Pytranslate's host system, not its own output.
 - optimize_anything omni reuses `blogs/omni.png`.
-- *Knowing Is Not Seeing* currently uses a typographic paper-cover thumbnail containing its title and venue, not an invented research figure. OpenReview blocked automated access to the PDF; replace this cover with a supplied figure when available.
+- *Knowing Is Not Seeing* uses a typographic paper-cover thumbnail with its title and venue.
 
 New local assets:
 
@@ -29,7 +29,7 @@ New local assets:
 - `talks/laude-podcast.jpg`: thumbnail of [the podcast with Andy Konwinski](https://www.youtube.com/watch?v=mmpW36WdFbI&t=2707s), linking to Lakshya’s segment at 45:07–48:36.
 - `talks/laude-frontier.jpg`: thumbnail of [Laude Open Frontier](https://www.youtube.com/watch?v=rePCdzfITKc&t=1131), linking to Lakshya’s GEPA presentation at 18:51–36:31.
 
-The personal essay uses the user-supplied `HK1FizDbIAAKyB7.jpeg` from Downloads, copied to `blogs/owning-token-capital.jpg` and resized to 900 pixels wide. GEPA posts use their own figures or the project logo.
+The personal essay thumbnail is `blogs/owning-token-capital.jpg`, resized to 900 pixels wide. GEPA posts use their own figures or the project logo.
 
 YouTube thumbnails are served locally and link to their respective videos; no video embeds or autoplay are used. Scientific figures retain their aspect ratios and link to a larger view. Alternate text describes the subject of each visual.
 
@@ -53,11 +53,11 @@ Additional project thumbnails come from the linked repositories:
 - `projects/space-bars.png`: [Space_B__ars gameplay](https://raw.githubusercontent.com/LakshyAAAgrawal/Space_B__ars/master/assets/images/Game_Play.png).
 - `projects/covid.png`: [CoVid demo image](https://raw.githubusercontent.com/LakshyAAAgrawal/CoVid/master/res/images/demo_image.png).
 
-The Stanford CS329T lecture uses the existing GEPA project logo, not a fabricated lecture thumbnail. Its date and slides are linked from the [course syllabus](https://web.stanford.edu/class/cs329t/syllabus.html).
+The Stanford CS329T lecture uses the GEPA project logo. Its date and slides are linked from the [course syllabus](https://web.stanford.edu/class/cs329t/syllabus.html).
 
 ## Blog thumbnails
 
-The blog collection was checked against [GEPA’s sitemap](https://gepa-ai.github.io/gepa/sitemap.xml) on September 26, 2026. New thumbnails are resized to at most 640 pixels, retain their native aspect ratios, and link to the corresponding post:
+The blog collection follows [GEPA’s sitemap](https://gepa-ai.github.io/gepa/sitemap.xml). Thumbnails are resized to at most 640 pixels, retain their native aspect ratios, and link to the corresponding post:
 
 The displayed collection is restricted to posts whose [source front matter](https://github.com/gepa-ai/gepa/tree/main/docs/docs/blog/posts) lists `lakshya` as an author. The two guest posts (`confidence-adapter-benchmark` and `bridging-the-subjectivity-gap`) are not displayed; their previously downloaded thumbnails are retained as unused assets.
 - `blogs/subjectivity.png`: [original figure](https://gepa-ai.github.io/gepa/blog/2026-09-17-bridging-the-subjectivity-gap/images/subjectivity-gap.png).
