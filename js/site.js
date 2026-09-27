@@ -156,4 +156,37 @@
     }, { rootMargin: '-15% 0px -65% 0px' });
     ['about', 'research', 'software', 'talks', 'blogs', 'honors', 'background'].forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
+
+  // Analytics events with readable labels: scroll depth milestones and outbound link clicks.
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  }
+  var scrollReached = {};
+  function checkScrollDepth() {
+    var range = document.documentElement.scrollHeight - window.innerHeight;
+    var percent = range > 0 ? Math.round(window.scrollY / range * 100) : 100;
+    [25, 50, 75, 100].forEach(function (mark) {
+      if (!scrollReached[mark] && percent >= mark) {
+        scrollReached[mark] = true;
+        track('scroll_depth', { percent_scrolled: mark });
+      }
+    });
+  }
+  window.addEventListener('scroll', checkScrollDepth, { passive: true });
+  checkScrollDepth();
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var url;
+    try { url = new URL(link.href, location.href); } catch (error) { return; }
+    if (url.protocol !== 'mailto:' && url.hostname === location.hostname) return;
+    var label = link.getAttribute('aria-label') || link.title || link.textContent.replace(/\s+/g, ' ').trim().slice(0, 80) || url.hostname;
+    var section = link.closest('section[id], footer, header, nav');
+    track('outbound_click', {
+      link_label: label,
+      link_url: url.href,
+      link_domain: url.protocol === 'mailto:' ? 'mailto' : url.hostname,
+      page_section: section ? (section.id || section.tagName.toLowerCase()) : 'page'
+    });
+  }, true);
 })();
