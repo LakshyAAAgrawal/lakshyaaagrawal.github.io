@@ -45,6 +45,15 @@ Additional affiliation marks are sourced from the institutions themselves:
 - `logos/laude.svg`: [Laude mark](https://www.laude.org/images/logo/swirl-2-rings-black.svg).
 - `logos/aws.png`: [AWS logo](https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png), used for the explicitly labeled fellowship affiliation.
 - `logos/incf.png`: [INCF logo](https://www.incf.org/sites/default/files/incf_logo_grey.png), labeled INCF / Maxima for the GSoC affiliation.
+- `logos/ai2.svg`: official Ai2 logo symbol (`ai2-logo-svg`) extracted without changing its paths from [Ai2’s website](https://allenai.org/).
+
+Additional project thumbnails come from the linked repositories:
+
+- `projects/chip8emu.png`: [CHIP-8 emulator screenshot](https://raw.githubusercontent.com/LakshyAAAgrawal/chip8emu/master/res/Screenshots/s1.png).
+- `projects/space-bars.png`: [Space_B__ars gameplay](https://raw.githubusercontent.com/LakshyAAAgrawal/Space_B__ars/master/assets/images/Game_Play.png).
+- `projects/covid.png`: [CoVid demo image](https://raw.githubusercontent.com/LakshyAAAgrawal/CoVid/master/res/images/demo_image.png).
+
+The Stanford CS329T lecture uses the existing GEPA project logo, not a fabricated lecture thumbnail. Its date and slides are linked from the [course syllabus](https://web.stanford.edu/class/cs329t/syllabus.html).
 
 ## Blog thumbnails
 

@@ -44,7 +44,7 @@
   </script>
 
   <!-- System fonts keep the page lightweight and typographically consistent. -->
-  <link rel="stylesheet" href="css/site.css?v=20260927-1">
+  <link rel="stylesheet" href="css/site.css?v=20260927-2">
 
   <noscript><style>.work[hidden] { display: block !important; } .research-status { display: none; }</style></noscript>
 
@@ -126,11 +126,10 @@
       <h1 id="name">Lakshya A Agrawal</h1>
     </div>
     <div class="intro-copy">
-      <p>I am a Computer Science PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am fortunate to be advised by <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>. I am affiliated with <a href="https://sky.cs.berkeley.edu/">Sky Lab</a>, <a href="https://bair.berkeley.edu/">BAIR</a>, and <a href="https://nlp.cs.berkeley.edu/">Berkeley NLP</a>. I build AI systems that improve through experience, by optimizing their prompts, agent harnesses, and model weights. My research spans reflective optimization, reinforcement learning, and continual learning. 
-      My background in <a href="#pl">programming-language tools</a> led to <a href="#mgd">Monitor-Guided Decoding (MGD)</a> at Microsoft Research. MGD built a static-analysis harness around an LLM to guide code generation, letting a smaller model outperform a larger one. This motivated my work at Berkeley on evaluating LLM systems with harnesses, rather than LLMs alone. <a href="#langprobe">LangProBe</a> mapped their cost–quality frontier and established that the principle holds across many domains: smaller models with well-tuned harnesses can outperform much larger LLMs at lower cost.</p>
-      <p>These results suggested that automatically optimizing harnesses from rich textual feedback could be more sample-efficient than updating model weights. <a href="#gepa">GEPA</a> optimizes prompts by reflecting on execution traces and textual feedback; <a href="#optimize-anything">optimize_anything</a> extends this to the full agent harness; and <a href="#gskill">gskill</a> learns repository-specific skills for coding agents.
+      <p>I am a Computer Science PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, advised by <a href="https://people.eecs.berkeley.edu/~matei/">Prof. Matei Zaharia</a> and <a href="https://people.eecs.berkeley.edu/~klein/">Prof. Dan Klein</a>. I am affiliated with <a href="https://sky.cs.berkeley.edu/">Sky Lab</a>, <a href="https://bair.berkeley.edu/">BAIR</a>, and <a href="https://nlp.cs.berkeley.edu/">Berkeley NLP</a>. I build AI systems that improve through experience, by optimizing their prompts, agent harnesses, and model weights.</p>
+      <p>My background in <a href="#pl">programming-language tools</a> led to <a href="#mgd">Monitor-Guided Decoding (MGD)</a> at Microsoft Research. MGD built a static-analysis harness around an LLM to guide code generation, letting a smaller model outperform a larger one on code generation. This motivated my work at Berkeley on evaluating LLM systems with harnesses, rather than LLMs alone. In <a href="#langprobe">LangProBe</a>, we mapped their cost–quality frontier and showed that the principle holds across many domains: smaller models with well-tuned harnesses can outperform much larger LLMs at lower cost.</p>
+      <p>This motivated exploring automated harness optimization from rich textual feedback. <a href="#gepa">GEPA</a> optimizes prompts by reflecting on execution traces and textual feedback, outperforming GRPO with fewer rollouts in our experiments; <a href="#optimize-anything">optimize_anything</a> extends this to the full agent harness; and <a href="#gskill">gskill</a> learns repository-specific skills for coding agents.
       This led to studying how learning in text space could also support model training. <a href="#mmgrpo">mmGRPO</a> is an RL method for multi-component LLM systems, combining weight updates with prompt optimization. <a href="#fst">Fast-Slow Training</a> interleaves fast prompt adaptation with slower RL updates, so prompts absorb task-specific lessons while weights need not change as much. This improves data efficiency and performance while preserving the capacity of the model to learn subsequent tasks. I am continuing to study how self-improving AI systems should learn in the harness and in the model.</p>
-      <p>I am also very grateful for the opportunity to work with <a href="https://people.eecs.berkeley.edu/~jegonzal/">Prof. Joseph E. Gonzalez</a>, <a href="https://people.eecs.berkeley.edu/~istoica/">Prof. Ion Stoica</a>, <a href="https://scholar.google.com/citations?user=JSFmVQEAAAAJ&amp;hl=en">Prof. Alex Dimakis</a>, and <a href="https://omarkhattab.com/">Prof. Omar Khattab</a>, each of whom has shaped how I approach research.</p>
 
     </div>
   </section>
@@ -399,6 +398,35 @@
   <div class="work-links"><a href="https://maxima.sourceforge.io/docs/manual/maxima_singlepage.html#Package-pytranslate">Documentation</a></div>
 </article>
     </div>
+    <details class="more-projects" id="more-projects">
+      <summary><span class="when-closed">Show more</span><span class="when-open">Show fewer</span><span class="sr-only"> open-source projects</span></summary>
+      <div class="project-list">
+        <article class="work project" id="project-chip8emu" data-topics="software">
+          <a class="work-visual" href="https://github.com/LakshyAAAgrawal/chip8emu" aria-label="chip8emu on GitHub"><img src="images/projects/chip8emu.png" alt="CHIP-8 emulator running a maze program" loading="lazy" decoding="async"></a>
+          <h3><a href="https://github.com/LakshyAAAgrawal/chip8emu">chip8emu</a></h3>
+          <p class="work-description">A terminal-based CHIP-8 emulator written in C++, for running classic games and other CHIP-8 programs.</p>
+          <div class="work-links"><a href="https://github.com/LakshyAAAgrawal/chip8emu"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a></div>
+        </article>
+        <article class="work project" id="project-covidreliefbot" data-topics="software">
+          <a class="work-visual project-icon" href="https://github.com/LakshyAAAgrawal/covidreliefbot" aria-label="CovidRelief Bot on GitHub"><svg aria-hidden="true" viewBox="0 0 16 16"><use href="#icon-github"></use></svg></a>
+          <h3><a href="https://github.com/LakshyAAAgrawal/covidreliefbot">CovidRelief Bot</a></h3>
+          <p class="work-description">A Telegram chatbot built to help find COVID-19 resource leads in India, including oxygen and hospital beds, and extract resource details from images.</p>
+          <div class="work-links"><a href="https://github.com/LakshyAAAgrawal/covidreliefbot"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a></div>
+        </article>
+        <article class="work project" id="project-space_b__ars" data-topics="software">
+          <a class="work-visual" href="https://github.com/LakshyAAAgrawal/Space_B__ars" aria-label="Space_B__ars on GitHub"><img src="images/projects/space-bars.png" alt="Space_B__ars keyboard-catching gameplay" loading="lazy" decoding="async"></a>
+          <h3><a href="https://github.com/LakshyAAAgrawal/Space_B__ars">Space_B__ars</a></h3>
+          <p class="work-description">A Pygame game in which you capture escaped keyboard keys and combine them into commands to change the game.</p>
+          <div class="work-links"><a href="https://github.com/LakshyAAAgrawal/Space_B__ars"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a></div>
+        </article>
+        <article class="work project" id="project-covid" data-topics="software">
+          <a class="work-visual" href="https://github.com/LakshyAAAgrawal/CoVid" aria-label="CoVid on GitHub"><img src="images/projects/covid.png" alt="CoVid lecture recording interface" loading="lazy" decoding="async"></a>
+          <h3><a href="https://github.com/LakshyAAAgrawal/CoVid">CoVid</a></h3>
+          <p class="work-description">Browser-based lecture recording software designed to keep recordings small for students with limited internet connectivity.</p>
+          <div class="work-links"><a href="https://github.com/LakshyAAAgrawal/CoVid"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg>Code</a><a href="https://www.youtube.com/watch?v=ePbTFDbfO74">Demo</a></div>
+        </article>
+      </div>
+    </details>
     <div class="other-contributions"><p>Other open-source contributions include <a href="https://github.com/INRIA/spoon/pulls?q=author%3ALakshyAAAgrawal">INRIA/spoon</a>, <a href="https://github.com/mozilla/bugbug/pulls?q=author%3ALakshyAAAgrawal">mozilla/bugbug</a>, and <a href="https://github.com/lucidrains/memorizing-transformers-pytorch/pulls?q=author%3ALakshyAAAgrawal">memorizing-transformers-pytorch</a>.</p></div>
   </section>
 
@@ -421,6 +449,10 @@
       <article class="talk-card">
         <a class="talk-cover" href="https://www.youtube.com/watch?v=XWOwqN2BpjM" aria-label="Watch talk: optimize_anything"><img src="images/talks/cais.jpg" alt="optimize_anything video thumbnail" width="480" height="360" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a>
         <div class="talk-copy"><span class="eyebrow">ACM CAIS · May 2026</span><h3><a href="https://www.youtube.com/watch?v=XWOwqN2BpjM">optimize_anything</a></h3><p>Industry Spotlight Award.</p><div class="talk-links"><a href="https://www.youtube.com/watch?v=XWOwqN2BpjM"><svg class="link-icon" aria-hidden="true" focusable="false"><use href="#icon-youtube"></use></svg>Watch talk</a></div></div>
+      </article>
+      <article class="talk-card">
+        <a class="talk-cover" href="https://web.stanford.edu/class/cs329t/slides/Lecture%209%20-%2020251028%20GEPA_Talk.pdf" aria-label="Read Stanford CS329T GEPA guest lecture slides"><img src="assets/logos/gepa_logo_with_text.svg" alt="GEPA" loading="lazy" decoding="async"></a>
+        <div class="talk-copy"><span class="eyebrow">Stanford CS329T · Oct 28, 2025</span><h3><a href="https://web.stanford.edu/class/cs329t/syllabus.html">GEPA</a></h3><p>Guest lecture.</p><div class="talk-links"><a href="https://web.stanford.edu/class/cs329t/slides/Lecture%209%20-%2020251028%20GEPA_Talk.pdf">Slides</a><a href="https://web.stanford.edu/class/cs329t/syllabus.html">Course syllabus</a></div></div>
       </article>
       </div>
     </div>
@@ -522,7 +554,7 @@
     <div class="background-grid">
       <div>
         <h3>Education &amp; experience</h3>
-        <p>Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), working with <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a>. I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department. I did my undergraduate thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a>, and spent two summers at EPFL with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a>. I also interned as a software development engineer at Microsoft in 2021 and participated in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> in 2019, working on the <a href="#pytranslate">Maxima-to-Python transpiler</a>.</p>
+        <p>I interned at <a href="https://allenai.org/">Ai2 (Allen Institute for AI)</a> in Summer 2025. Before Berkeley, I was an AI4Code Research Fellow at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research</a> (2022–2024), working with <a href="https://www.microsoft.com/en-us/research/people/kanadeaditya/">Dr. Aditya Kanade</a>, <a href="https://www.microsoft.com/en-us/research/people/navingo/">Dr. Navin Goyal</a>, <a href="https://www.microsoft.com/en-us/research/people/shuvendu/">Dr. Shuvendu Lahiri</a>, and <a href="https://www.microsoft.com/en-us/research/people/sriram/">Dr. Sriram Rajamani</a>. I studied Computer Science and Applied Mathematics at <a href="https://iiitd.ac.in/">IIIT-Delhi</a>, graduating first in my department. I did my undergraduate thesis with <a href="https://www.iiitd.ac.in/raghava">Dr. Raghava Mutharaju</a>, and spent two summers at EPFL with <a href="https://people.epfl.ch/james.larus">Prof. James Larus</a>. I also interned as a software development engineer at Microsoft in 2021 and participated in <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> in 2019, working on the <a href="#pytranslate">Maxima-to-Python transpiler</a>.</p>
         <div class="service"><h3>Teaching &amp; service</h3>
           <p>I was a teaching assistant for Machine Learning (CSE343/ECE563) and Theory of Computation (CSE322) at IIIT-Delhi in 2021. I have reviewed for NeurIPS 2025, ICLR 2025, and ISEC 2024, and mentor student collaborators on the <a href="https://gepa-ai.github.io/gepa/blog/">GEPA project</a>.</p>
         </div>
@@ -547,6 +579,7 @@
   <section class="contact" aria-label="Get in touch"><h2>Let’s talk.</h2><div><p>I look forward to learning about the use cases and failure modes of AI systems, and the research questions they raise.</p><a href="mailto:lakshyaaagrawal@berkeley.edu">lakshyaaagrawal@berkeley.edu <span aria-hidden="true">↗</span></a></div></section>
   <section class="section affiliations" id="affiliations" aria-labelledby="affiliations-heading">
     <h2 id="affiliations-heading">Present &amp; past affiliations</h2>
+    <h3>Present</h3>
     <ul class="affiliation-logos">
       <li><a href="https://www.berkeley.edu/"><img src="images/logos/berkeley.svg" alt="" width="88" height="40" loading="lazy" decoding="async"><span>UC Berkeley</span></a></li>
       <li><a href="https://sky.cs.berkeley.edu/"><img src="images/berkeley_sky.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>Sky Lab</span></a></li>
@@ -554,6 +587,10 @@
       <li><a href="https://nlp.cs.berkeley.edu/"><img src="images/logos/berkeley-nlp.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>Berkeley NLP</span></a></li>
       <li><a href="https://www.laude.org/"><img src="images/logos/laude.svg" alt="" width="88" height="40" loading="lazy" decoding="async"><span>Laude</span></a></li>
       <li><a href="https://eecs.berkeley.edu/news/eecs-students-drive-ai-innovation-as-amazon-phd-fellows/"><img src="images/logos/aws.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>AWS Fellowship</span></a></li>
+    </ul>
+    <h3>Past</h3>
+    <ul class="affiliation-logos">
+      <li><a href="https://allenai.org/"><img src="images/logos/ai2.svg" alt="" width="88" height="40" loading="lazy" decoding="async"><span>Ai2</span></a></li>
       <li><a href="https://iiitd.ac.in/"><img src="images/logos/iiitd.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>IIIT-Delhi</span></a></li>
       <li><a href="https://www.microsoft.com/en-us/research/"><img src="images/logos/microsoft.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>Microsoft</span></a></li>
       <li><a href="https://www.epfl.ch/"><img src="images/logos/epfl.png" alt="" width="88" height="40" loading="lazy" decoding="async"><span>EPFL</span></a></li>
@@ -563,6 +600,6 @@
   </section>
 </main>
 <footer class="container footer"><span>Last updated September 2026</span><div><a href="https://forms.gle/ZdAZDRqyPkofTVQP7">Anonymous contact &amp; feedback</a><a href="https://github.com/LakshyAAAgrawal/lakshyaaagrawal.github.io">Source ↗</a><a href="#top">Back to top ↑</a></div><div class="visitors" aria-hidden="true"><a href="https://mapmyvisitors.com/web/1bvp5" title="Visit tracker" tabindex="-1"><img src="https://mapmyvisitors.com/map.png?cl=444444&amp;w=300&amp;t=tt&amp;d=q4DhG5vMi18gxz0yEKDBcfct3ReHJOJCuG0k-8evHXs&amp;co=fbfbfb&amp;ct=444444" alt="Map of site visitors" width="300"></a></div></footer>
-<script src="js/site.js?v=20260927-1" defer></script>
+<script src="js/site.js?v=20260927-2" defer></script>
 </body>
 </html>

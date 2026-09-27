@@ -90,6 +90,12 @@ summary::-webkit-details-marker { display: none; }
 /* One paper per row. Figures support entries rather than framing cards. */
 .work-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
 .project-list { display: grid; grid-template-columns: minmax(0, 1fr); }
+.more-projects > summary { list-style: none; color: var(--accent); padding: 8px 0; width: fit-content; }
+.more-projects > summary::before { content: "+ "; }
+.more-projects[open] > summary::before { content: "− "; }
+.more-projects .when-open, .more-projects[open] .when-closed { display: none; }
+.more-projects[open] .when-open { display: inline; }
+.project-icon svg { width: 32px; height: 32px; fill: currentColor; }
 .other-contributions { margin-top: 12px; }
 .work { min-width: 0; padding: 17px 0; scroll-margin-top: 24px; }
 .work:has(.work-visual) { display: grid; grid-template-columns: 155px minmax(0, 1fr); column-gap: 24px; align-content: start; }
@@ -178,6 +184,7 @@ summary::-webkit-details-marker { display: none; }
 .recognition small a { text-decoration: underline; }
 .affiliations { padding-top: 22px; padding-bottom: 12px; }
 .affiliations h2 { font-size: 16px; margin-bottom: 16px; }
+.affiliations h3 { font-size: 12px; font-weight: 400; color: var(--muted); margin: 18px 0 12px; }
 .affiliation-logos { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 18px 22px; margin: 0; padding: 0; list-style: none; }
 .affiliation-logos li { width: 100px; }
 .affiliation-logos a { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; font-size: 11px; line-height: 1.4; }

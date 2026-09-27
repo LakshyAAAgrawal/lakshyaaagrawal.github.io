@@ -15,8 +15,8 @@ const projects = articles(section('software'));
 test('publications and software are distinct, with a thumbnail per entry', () => {
   assert.equal(papers.length, 14);
   assert.equal(papers.filter(p => attr(p, 'data-selected') === 'true').length, 7);
-  assert.equal(projects.length, 6);
-  assert.deepEqual(projects.map(p => attr(p, 'id')), ['gepa-software', 'multilspy', 'dspy', 'omni', 'streamblocks', 'pytranslate']);
+  assert.equal(projects.length, 10);
+  assert.deepEqual(projects.map(p => attr(p, 'id')), ['gepa-software', 'multilspy', 'dspy', 'omni', 'streamblocks', 'pytranslate', 'project-chip8emu', 'project-covidreliefbot', 'project-space_b__ars', 'project-covid']);
   for (const entry of [...papers, ...projects]) assert.match(entry, /class="work-visual(?: |")/);
   for (const entry of projects) assert.ok(!/\bhidden\b|data-selected=/.test(entry.split('>')[0]));
   assert.match(html, /Selected publications · 7 of 14/);
@@ -46,7 +46,7 @@ test('publication metadata, blog date, and affiliations match the corrections', 
   assert.ok(section('blogs').includes('<time datetime="2026-06-20">Jun 20, 2026</time>'));
   assert.ok(section('blogs').includes('News Coverage</h3>'));
   assert.ok(!section('background').includes('affiliation-logos'));
-  assert.equal((section('affiliations').match(/<li>/g) || []).length, 11);
+  assert.equal((section('affiliations').match(/<li>/g) || []).length, 12);
   assert.ok(html.indexOf('id="affiliations"') > html.indexOf('class="contact"'));
   assert.ok(section('background').includes('https://www.thelawrenceschool.org/'));
   assert.ok(section('background').includes('stylophone, Indian flute, and snare drums'));
@@ -65,6 +65,23 @@ test('IDs, local anchors, assets, and cache versions remain valid', () => {
   assert.equal(html.match(/css\/site.css\?v=([^"\s]+)/)[1], html.match(/js\/site.js\?v=([^"\s]+)/)[1]);
 });
 
+test('bio edits, Stanford lecture, Ai2, and expandable projects are present', () => {
+  const bio = html.split('<div class="intro-copy">')[1].split('</div>')[0];
+  assert.ok(!/fortunate|very grateful|My research spans|Gonzalez|Stoica|Dimakis|Khattab/.test(bio));
+  assert.ok(bio.includes('on code generation'));
+  assert.ok(bio.includes('In <a href="#langprobe">LangProBe</a>, we mapped'));
+  assert.ok(bio.includes('outperforming GRPO with fewer rollouts in our experiments'));
+  assert.ok(section('talks').includes('Stanford CS329T · Oct 28, 2025'));
+  assert.ok(section('talks').includes('https://web.stanford.edu/class/cs329t/syllabus.html'));
+  assert.ok(section('background').includes('Ai2 (Allen Institute for AI)</a> in Summer 2025'));
+  assert.ok(section('affiliations').includes('<h3>Present</h3>'));
+  assert.ok(section('affiliations').includes('<h3>Past</h3>'));
+  const more = section('software').match(/<details class="more-projects"[^>]*>([\s\S]*?)<\/details>/);
+  assert.ok(more);
+  assert.ok(!more[0].split('>')[0].includes(' open'));
+  assert.equal(articles(more[1]).length, 4);
+});
+
 test('publication filters and direct links do not hide software projects', () => {
   const makeEntry = source => ({
     id: attr(source, 'id'),
@@ -74,6 +91,8 @@ test('publication filters and direct links do not hide software projects', () =>
   });
   const works = papers.map(makeEntry);
   const software = projects.map(makeEntry);
+  const moreProjects = { tagName: 'DETAILS', open: false, parentElement: null };
+  software.filter(w => w.id.startsWith('project-')).forEach(w => { w.parentElement = moreProjects; });
   const buttons = [...section('research').matchAll(/<button\b[^>]*data-filter="([^"]+)"[^>]*>/g)].map(m => ({
     dataset: { filter: m[1] }, setAttribute() {}, addEventListener() {},
   }));
@@ -105,6 +124,10 @@ test('publication filters and direct links do not hide software projects', () =>
     context.revealHash();
     assert.equal(works.filter(w => !w.hidden).length, 7);
   }
+  context.location.hash = '#project-chip8emu';
+  context.revealHash();
+  assert.equal(moreProjects.open, true);
+  assert.equal(works.filter(w => !w.hidden).length, 7);
   context.location.hash = '#map';
   context.revealHash();
   assert.equal(works.filter(w => !w.hidden).length, 14);
