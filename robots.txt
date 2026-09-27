@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://lakshyaaagrawal.github.io/sitemap.xml
+Sitemap: https://lakshyaaagrawal.com/sitemap.xml
