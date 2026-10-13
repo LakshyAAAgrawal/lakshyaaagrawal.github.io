@@ -99,8 +99,8 @@ test('bio edits, Stanford lecture, Ai2, and expandable projects are present', ()
   assert.ok(bio.includes('on code generation'));
   assert.ok(bio.includes('In <a href="#langprobe">LangProBe</a>, we mapped'));
   assert.ok(bio.includes('outperforming GRPO with fewer rollouts in our experiments'));
-  assert.ok(section('talks').includes('Stanford CS329T · Oct 28, 2025'));
-  assert.ok(section('talks').includes('https://web.stanford.edu/class/cs329t/syllabus.html'));
+  assert.ok(section('talks').includes('Stanford · Oct 2025'));
+  assert.ok(section('talks').includes('https://web.stanford.edu/class/cs329t/slides/'));
   assert.ok(section('background').includes('Ai2 (Allen Institute for AI)</a> in Summer 2025'));
   assert.ok(section('affiliations').includes('<h3>Present</h3>'));
   assert.ok(section('affiliations').includes('<h3>Past</h3>'));

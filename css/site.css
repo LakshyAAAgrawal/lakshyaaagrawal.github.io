@@ -127,8 +127,8 @@ summary::-webkit-details-marker { display: none; }
 .paper-details > summary::before { content: "+"; display: inline-block; width: 14px; }
 .paper-details[open] > summary::before { content: "−"; }
 .paper-details p { margin: 7px 0 0; }
-.authors { line-height: 1.6; }
-.me { color: var(--text); font-weight: 600; }
+.authors { margin: 3px 0 5px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.me { color: var(--text); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .contribution { font-style: italic; }
 
 /* Talks retain their order and images, with equal visual weight. */
